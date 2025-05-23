@@ -1,13 +1,35 @@
+import Nav_Bar from "./Components/Nav_Bar.jsx";
+import Hero from "./Pages/Hero.tsx";
+import Footer from "./Components/Footer.jsx";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Courses from "./Pages/Courses Page/CoursesPage.tsx";
+import About from "./Pages/AboutPage.tsx";
+import Contact from "./Pages/ContactPage.tsx";
+import Instructor from "./Pages/Become_an_InstructorPage.tsx";
+import ErrorPage from './Pages/ErrorPage.tsx'
+import React from "react";
 
-function App() {
 
-  return (
-      <>
-          <h1 className="text-3xl font-bold underline">
-              Hello world!
-          </h1>
-      </>
-  )
+const App:React.FC = () => {
+    return (
+        <BrowserRouter>
+            <Nav_Bar />
+            <main className="pt-32">
+                <Routes>
+                    <Route path="/" element={<Hero />} />
+                    <Route path="/courses" element={<Courses />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/instructor" element={<Instructor />} />
+                    <Route path="/notFound" element={<ErrorPage/>} />
+                </Routes>
+            </main>
+            <Footer />
+        </BrowserRouter>
+
+
+
+    )
 }
 
 export default App
