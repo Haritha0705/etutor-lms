@@ -1,3 +1,4 @@
+import React from "react";
 import Nav_Bar from "./Components/Nav_Bar.jsx";
 import Hero from "./Pages/Landing Page/Hero.tsx";
 import Footer from "./Components/Footer.jsx";
@@ -7,7 +8,7 @@ import About from "./Pages/About page/AboutPage.tsx";
 import Contact from "./Pages/ContactPage.tsx";
 import Instructor from "./Pages/Instructor Page/Become_an_InstructorPage.tsx";
 import ErrorPage from './Pages/ErrorPage.tsx'
-import React from "react";
+
 
 
 const App:React.FC = () => {
