@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "../../Components/Button.tsx";
 import logo from '../../assets/icons/GraduationCap.svg';
 import registerImg from '../../assets/image/Register.svg';
@@ -5,7 +6,7 @@ import Google from '../../assets/icons/googleLogo.svg';
 import Facebook from '../../assets/icons/FacebookLogo.svg';
 import Apple from '../../assets/icons/AppleLogo.svg';
 import Arrow from '../../assets/icons/ArrowRightW.svg';
-import React from "react";
+
 
 const Register:React.FC = ()=> {
     return (
