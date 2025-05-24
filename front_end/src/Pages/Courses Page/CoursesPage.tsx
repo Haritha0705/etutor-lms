@@ -14,7 +14,7 @@
 // import search from "../../assets/icons/MagnifyingGlass.svg";
 // import down from "../../assets/icons/ChevronDown.svg";
 //
-import React from "react";
+//import React from "react";
 // import cpu from "../../assets/icons/Cpu.svg";
 // import hand from "../../assets/icons/Handshake.svg";
 // import card from "../../assets/icons/CreditCard.svg";
