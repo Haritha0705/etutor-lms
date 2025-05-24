@@ -28,9 +28,6 @@ import Img6 from "../../assets/image/aboutImg7.jpg"
 import Img7 from "../../assets/image/aboutImg8.jpg"
 import CommentCard from "../../Components/About Page/CommentCard.tsx";
 
-
-
-
 const companyLogos = [Logo1,Logo2,Logo3,Logo4,Logo5,Logo6,Logo7,Logo8]
 const companyList: React.JSX.Element[] = companyLogos.map(logo =>(
     <div className={'shadow bg-white py-5 px-10'}>
