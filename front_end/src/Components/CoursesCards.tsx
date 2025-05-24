@@ -9,7 +9,7 @@ interface CoursesCardsProps {
     categoryTextColour: string;
     price: string;
     rating: string; // Consider changing to number if possible
-    studentCount: string; // Same here: number would be better
+    studentCount: string;
 }
 
 const CoursesCards: React.FC<CoursesCardsProps> = ({img, category, text, categoryColour, categoryTextColour, price, rating, studentCount}) => {

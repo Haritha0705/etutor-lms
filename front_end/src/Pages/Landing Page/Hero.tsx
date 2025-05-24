@@ -1,56 +1,56 @@
-import Button from "../Components/Button.tsx";
-import CategoryCard from "../Components/CategoryCard.tsx";
-import CoursesCards from "../Components/CoursesCards.tsx";
-import FeatureCoursesCard from "../Components/FeatureCoursesCard.tsx";
-import InstructorCard from "../Components/InstructorCard.tsx";
-import hero_main from '../assets/image/Images.jpg';
-import hand from '../assets/icons/Handshake.svg'
-import camera from '../assets/icons/Camera.svg'
-import chart from '../assets/icons/ChartBarHorizontal.svg'
-import music from '../assets/icons/Headphones.svg'
-import pkg from '../assets/icons/Package.svg'
-import pen from '../assets/icons/PenNib.svg'
-import mega from '../assets/icons/MegaphoneSimple.svg'
-import cpu from '../assets/icons/Cpu.svg'
-import bug from '../assets/icons/BugDroid.svg'
-import receipt from '../assets/icons/Receipt.svg'
-import kit from '../assets/icons/FirstAidKit.svg'
-import card from '../assets/icons/CreditCard.svg'
-import arrow from '../assets/icons/ArrowRight.svg'
-import c1Img from '../assets/image/Course Images1.jpg'
-import c2Img from '../assets/image/Course Images2.jpg'
-import c3Img from '../assets/image/Course Images3.jpg'
-import c4Img from '../assets/image/Course Images4.jpg'
-import c5Img from '../assets/image/Course Images5.jpg'
-import c6Img from '../assets/image/Course Images6.jpg'
-import c7Img from '../assets/image/Course Images7.jpg'
-import c8Img from '../assets/image/Course Images8.jpg'
-import c9Img from '../assets/image/Course Images9.jpg'
-import c10Img from '../assets/image/Course Images10.jpg'
-import cF1 from '../assets/image/Course F1.jpg'
-import cF2 from '../assets/image/Course F2.jpg'
-import cF3 from '../assets/image/Course F3.jpg'
-import cF4 from '../assets/image/Course F4.jpg'
-import cFProfileImg from '../assets/image/PhotoProfile1.jpg'
-import Radd1 from '../assets/image/Course Images Radd 1.jpg'
-import Radd2 from '../assets/image/Course Images Radd 2.jpg'
-import Radd3 from '../assets/image/Course Images Radd 3.jpg'
-import coverImg from '../assets/image/Become an Instructor Cover.jpg'
+import Button from "../../Components/Button.tsx";
+import CategoryCard from "../../Components/CategoryCard.tsx";
+import CoursesCards from "../../Components/CoursesCards.tsx";
+import FeatureCoursesCard from "../../Components/FeatureCoursesCard.tsx";
+import InstructorCard from "../../Components/InstructorCard.tsx";
+import hero_main from '../../assets/image/Images.jpg';
+import hand from '../../assets/icons/Handshake.svg'
+import camera from '../../assets/icons/Camera.svg'
+import chart from '../../assets/icons/ChartBarHorizontal.svg'
+import music from '../../assets/icons/Headphones.svg'
+import pkg from '../../assets/icons/Package.svg'
+import pen from '../../assets/icons/PenNib.svg'
+import mega from '../../assets/icons/MegaphoneSimple.svg'
+import cpu from '../../assets/icons/Cpu.svg'
+import bug from '../../assets/icons/BugDroid.svg'
+import receipt from '../../assets/icons/Receipt.svg'
+import kit from '../../assets/icons/FirstAidKit.svg'
+import card from '../../assets/icons/CreditCard.svg'
+import arrow from '../../assets/icons/ArrowRight.svg'
+import c1Img from '../../assets/image/Course Images1.jpg'
+import c2Img from '../../assets/image/Course Images2.jpg'
+import c3Img from '../../assets/image/Course Images3.jpg'
+import c4Img from '../../assets/image/Course Images4.jpg'
+import c5Img from '../../assets/image/Course Images5.jpg'
+import c6Img from '../../assets/image/Course Images6.jpg'
+import c7Img from '../../assets/image/Course Images7.jpg'
+import c8Img from '../../assets/image/Course Images8.jpg'
+import c9Img from '../../assets/image/Course Images9.jpg'
+import c10Img from '../../assets/image/Course Images10.jpg'
+import cF1 from '../../assets/image/Course F1.jpg'
+import cF2 from '../../assets/image/Course F2.jpg'
+import cF3 from '../../assets/image/Course F3.jpg'
+import cF4 from '../../assets/image/Course F4.jpg'
+import cFProfileImg from '../../assets/image/PhotoProfile1.jpg'
+import Radd1 from '../../assets/image/Course Images Radd 1.jpg'
+import Radd2 from '../../assets/image/Course Images Radd 2.jpg'
+import Radd3 from '../../assets/image/Course Images Radd 3.jpg'
+import coverImg from '../../assets/image/Become an Instructor Cover.jpg'
 
-import InIMg1 from '../assets/image/Image Instracter 1.jpg'
-import InIMg2 from '../assets/image/Image Instracter 2.jpg'
-import InIMg3 from '../assets/image/Image Instracter 3.jpg'
-import InIMg4 from '../assets/image/Image Instracter 4.jpg'
-import InIMg5 from '../assets/image/Image Instracter 5.jpg'
+import InIMg1 from '../../assets/image/Image Instracter 1.jpg'
+import InIMg2 from '../../assets/image/Image Instracter 2.jpg'
+import InIMg3 from '../../assets/image/Image Instracter 3.jpg'
+import InIMg4 from '../../assets/image/Image Instracter 4.jpg'
+import InIMg5 from '../../assets/image/Image Instracter 5.jpg'
 
-import Logo1 from '../assets/icons/Netfixsvg.svg'
-import Logo2 from '../assets/icons/Youtube.svg'
-import Logo3 from '../assets/icons/Google.svg'
-import Logo4 from '../assets/icons/Lenovo.svg'
-import Logo5 from '../assets/icons/Slack.svg'
-import Logo6 from '../assets/icons/Vesion.svg'
-import Logo7 from '../assets/icons/Lemark.svg'
-import Logo8 from '../assets/icons/Microsoft.svg'
+import Logo1 from '../../assets/icons/Netfixsvg.svg'
+import Logo2 from '../../assets/icons/Youtube.svg'
+import Logo3 from '../../assets/icons/Google.svg'
+import Logo4 from '../../assets/icons/Lenovo.svg'
+import Logo5 from '../../assets/icons/Slack.svg'
+import Logo6 from '../../assets/icons/Vesion.svg'
+import Logo7 from '../../assets/icons/Lemark.svg'
+import Logo8 from '../../assets/icons/Microsoft.svg'
 import React from "react";
 
 const Hero:React.FC = ()=> {
@@ -105,7 +105,7 @@ const Hero:React.FC = ()=> {
     ]
 
     const companyLogos = [Logo1,Logo2,Logo3,Logo4,Logo5,Logo6,Logo7,Logo8]
-    const companyList = companyLogos.map(logo =>(
+    const companyList: React.JSX.Element[] = companyLogos.map(logo =>(
         <div className={'shadow bg-white py-5 px-10'}>
             <img src={logo}/>
         </div>
