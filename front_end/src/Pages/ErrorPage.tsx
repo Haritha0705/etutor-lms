@@ -1,6 +1,7 @@
+import React from "react";
 import Button from "../Components/Button.tsx";
 import error from "../assets/image/404error.svg";
-import React from "react";
+
 
 const ErrorPage:React.FC = ()=> {
     return (
