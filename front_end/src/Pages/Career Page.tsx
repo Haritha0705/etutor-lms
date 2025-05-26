@@ -27,6 +27,7 @@ import Logo5 from "../assets/icons/Slack.svg";
 import Logo6 from "../assets/icons/Vesion.svg";
 import Logo7 from "../assets/icons/Lemark.svg";
 import Logo8 from "../assets/icons/Microsoft.svg";
+import PositionCard from "../Components/Contact Page/PositionsCard.tsx";
 
 const companyLogos = [Logo1,Logo2,Logo3,Logo4,Logo5,Logo6,Logo7,Logo8]
 const companyList: React.JSX.Element[] = companyLogos.map(logo =>(
@@ -130,6 +131,12 @@ const Career:React.FC = ()=> {
             </div>
             <div className={'bg-gray-300/20 flex flex-col items-center justify-center gap-10 pt-60 pb-20 px-56'}>
                 <h1 className={'text-4xl font-semibold text-center'}>Our all open positions (04)</h1>
+                <div className={'grid grid-cols-3 gap-5'}>
+                    <PositionCard title={'Product Designer (UI/UX Designer)'} city={'Tokyo, Japan'} type={'Full-Time'} option={'01 Vacancy'} deadline={'30 June, 2021'}/>
+                    <PositionCard title={'Social Media Manager'} city={'Moscow, Russia'} type={'Full-Time'} option={'01 Vacancy'} deadline={'30 June, 2021'}/>
+                    <PositionCard title={'Director of Accounting'} city={'Mumbai, India'} type={'Full-Time'} option={'03 Vacancy'} deadline={'30 June, 2021'}/>
+                    <PositionCard title={'Principal Software Engineer'} city={'Tokyo, Japan'} type={'Full-Time'} option={'01 Vacancy'} deadline={'30 June, 2021'}/>
+                </div>
 
             </div>
         </section>
