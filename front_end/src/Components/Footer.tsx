@@ -10,6 +10,7 @@ import Apple from '../assets/icons/apple 1.svg';
 import Android from '../assets/icons/google-play-5 1.svg';
 import Arrow from '../assets/icons/ArrowRightW.svg';
 import CartDown from '../assets/icons/CaretDown.svg';
+import {Link} from "react-router-dom";
 
 const Footer: React.FC = () => {
     const logos = [Facebook, Instagram, LinkedIn, Twitter, Youtube];
@@ -60,7 +61,7 @@ const Footer: React.FC = () => {
                                 <div className="w-full absolute h-[0.1rem] bg-orange-500 right-0 left-0 bottom-[-5px]"></div>
                             </p>
                             <p className="text-gray-500 text-sm">Contact</p>
-                            <p className="text-gray-500 text-sm">Career</p>
+                            <Link className="text-gray-500 text-sm" to={"/career"}>Career</Link>
                         </div>
                     </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import coverImg from "../assets/image/ContactMain.jpg"
 import Button from "../Components/Button.tsx";
 import Email from "../assets/icons/email.svg";
-import Card from "../Components/About Page/Contact Page/Card.tsx";
+import Card from "../Components/Contact Page/Card.tsx";
 import Img1 from "../assets/image/ContactImage1.jpg"
 import Img2 from "../assets/image/ContactImage2.jpg"
 import Img3 from "../assets/image/ContactImage3.jpg"
@@ -28,7 +28,7 @@ const Contact:React.FC = ()=> {
                         <Button text={'Copy Email'} className={'flex  items-center justify-center'} icon={Email}/>
                     </div>
                     <div>
-                        <img src={coverImg}/>
+                        <img src={coverImg} className={'w-[600px]'}/>
                     </div>
                 </div>
             </div>

@@ -69,7 +69,7 @@ const About:React.FC = ()=> {
                         <p className={' text-lg font-light'}>Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent fermentum quam mauris. Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt at vitae nulla. </p>
                     </div>
                     <div>
-                        <img src={coverImg}/>
+                        <img src={coverImg} className={'w-[600px]'}/>
                     </div>
                 </div>
                 <div className={'w-full py-20  items-center px-56 flex flex-col gap-20'}>
