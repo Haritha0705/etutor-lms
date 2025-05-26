@@ -9,8 +9,6 @@ import Contact from "./Pages/ContactPage.tsx";
 import Instructor from "./Pages/Instructor Page/Become_an_InstructorPage.tsx";
 import ErrorPage from './Pages/ErrorPage.tsx'
 
-
-
 const App:React.FC = () => {
     return (
         <BrowserRouter>

@@ -1,87 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
+import coverImg from "../assets/image/ContactMain.jpg"
+import Button from "../Components/Button.tsx";
+import Email from "../assets/icons/email.svg";
+
 
 const Contact:React.FC = ()=> {
 
-    const categories = [
-        {
-            name: "Development",
-            icon: "💻",
-            subcategories: [
-                { name: "Web Development", count: 574 },
-                { name: "Data Science", count: 568 },
-                { name: "Mobile Development", count: 1345 },
-                { name: "Software Testing", count: 317 },
-                { name: "Software Engineering", count: 31 },
-                { name: "Software Development Tools", count: 558 },
-                { name: "No-Code Development", count: 37 },
-            ],
-        },
-        { name: "Business", icon: "🤝", subcategories: [] },
-        { name: "Finance & Accounting", icon: "💳", subcategories: [] },
-        { name: "IT & Software", icon: "🖥️", subcategories: [] },
-        { name: "Office Productivity", icon: "📅", subcategories: [] },
-        { name: "Personal Development", icon: "📝", subcategories: [] },
-        { name: "Design", icon: "✏️", subcategories: [] },
-        { name: "Marketing", icon: "📣", subcategories: [] },
-        { name: "Lifestyle", icon: "🌟", subcategories: [] },
-        { name: "Photography & Video", icon: "📸", subcategories: [] },
-    ];
-
-    const [openCategory, setOpenCategory] = useState<number|null>(null);
-
-    const toggleCategory = (index:number) => {
-        setOpenCategory(openCategory === index ? null : index);
-    };
-
     return (
-        <div className="w-64 p-4">
-            <h2 className="text-lg font-semibold mb-4">CATEGORY</h2>
-            {categories.map((category, index) => (
-                <div key={index} className="mb-2">
-                    <button
-                        onClick={() => toggleCategory(index)}
-                        className="w-full text-left flex items-center justify-between p-2 bg-white rounded hover:bg-gray-100 focus:outline-none"
-                    >
-                        <span className="flex items-center">
-                            <span className="mr-2">{category.icon}</span>
-                            <span className={index === 0 ? "text-orange-500" : "text-gray-700"}>
-                                {category.name}
-                            </span>
-                        </span>
-                        <svg
-                            className={`w-4 h-4 transform ${openCategory === index ? "rotate-180" : ""}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </button>
-                    {openCategory === index && category.subcategories.length > 0 && (
-                        <div className="pl-6">
-                            {category.subcategories.map((sub, subIndex) => (
-                                <div
-                                    key={subIndex}
-                                    className="flex justify-between items-center p-2 text-gray-600 hover:bg-gray-50"
-                                >
-                                    <label className="flex items-center">
-                                        <input type="checkbox" className="mr-2" />
-                                        {sub.name}
-                                    </label>
-                                    <span className="text-sm">{sub.count}</span>
-                                </div>
-                            ))}
-                        </div>
-                    )}
+        <section className={'w-full'}>
+            <div className={'w-full h-30 bg-gray-300/20 flex flex-col items-center justify-center gap-3'}>
+                <p className={'text-3xl'}>About</p>
+                <p className={'text-sm'}><span className={'text-gray-400'}>Home /</span> About</p>
+            </div>
+            <div className={'flex flex-col pb-20  justify-center'}>
+                <div className={'relative flex items-center justify-between px-56'}>
+                    <div className={'absolute w-full  h-[0.01rem] bottom-0 left-0 right-0 bg-gray-400'}></div>
+                    <div className={'max-w-md gap-5 flex flex-col'}>
+                        <h1 className={' text-6xl font-semibold'}>Connect with us</h1>
+                        <p className={' text-lg font-light'}>Want to chat? We’d love to hear from you! Get in touch with our Customer Success Team to inquire about speaking events, advertising rates, or just say hello.</p>
+                        <Button text={'Copy Email'} className={'flex  items-center justify-center'} icon={Email}/>
+                    </div>
+                    <div>
+                        <img src={coverImg}/>
+                    </div>
                 </div>
-            ))}
-        </div>
+            </div>
+            <div className={'flex flex-col items-center justify-center gap-5'}>
+                <h1 className={'text-4xl font-semibold text-center'}>Our branches all over the world.</h1>
+                <div className={'max-w-sm'}>
+                    <p className={'text-sm font-light text-center'}>Phasellus sed quam eu eros faucibus cursus. Quisque mauris urna, imperdiet id leo quis, luctus auctor nisi. </p>
+                </div>
+
+            </div>
+        </section>
     );
 }
 
-export default Contact;
+export default Contact
