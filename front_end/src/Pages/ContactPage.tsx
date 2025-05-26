@@ -2,6 +2,11 @@ import React from "react";
 import coverImg from "../assets/image/ContactMain.jpg"
 import Button from "../Components/Button.tsx";
 import Email from "../assets/icons/email.svg";
+import Card from "../Components/About Page/Contact Page/Card.tsx";
+import Img1 from "../assets/image/ContactImage1.jpg"
+import Img2 from "../assets/image/ContactImage2.jpg"
+import Img3 from "../assets/image/ContactImage3.jpg"
+import Img4 from "../assets/image/ContactImage4.jpg"
 
 
 const Contact:React.FC = ()=> {
@@ -25,12 +30,14 @@ const Contact:React.FC = ()=> {
                     </div>
                 </div>
             </div>
-            <div className={'flex flex-col items-center justify-center gap-5'}>
+            <div className={'flex flex-col items-center justify-center gap-5 px-56'}>
                 <h1 className={'text-4xl font-semibold text-center'}>Our branches all over the world.</h1>
                 <div className={'max-w-sm'}>
                     <p className={'text-sm font-light text-center'}>Phasellus sed quam eu eros faucibus cursus. Quisque mauris urna, imperdiet id leo quis, luctus auctor nisi. </p>
                 </div>
-
+                <div>
+                    <Card covImg={}/>
+                </div>
             </div>
         </section>
     );
