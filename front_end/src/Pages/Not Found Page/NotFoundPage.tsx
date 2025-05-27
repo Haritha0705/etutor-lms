@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../Components/Shared/Button.tsx";
-import error from "../assets/image/404error.svg";
+import Button from "../../Components/Shared/Button.tsx";
+import error from "../../assets/image/404error.svg";
 
 
-const ErrorPage:React.FC = ()=> {
+const NotFoundPage:React.FC = ()=> {
     return (
         <div className="w-full  flex flex-col md:flex-row items-center justify-center px-6 py-10 gap-10">
             <div className="flex flex-col max-w-md gap-5 text-center md:text-left">
@@ -23,4 +23,4 @@ const ErrorPage:React.FC = ()=> {
     );
 }
 
-export default ErrorPage;
+export default NotFoundPage;

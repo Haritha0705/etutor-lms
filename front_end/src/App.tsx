@@ -5,9 +5,9 @@ import Footer from "./Components/Shared/Footer.tsx";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Courses from "./Pages/Courses Page/CoursesPage.tsx";
 import About from "./Pages/About page/AboutPage.tsx";
-import Contact from "./Pages/ContactPage.tsx";
-import Career from "./Pages/Career Page.tsx";
-import ErrorPage from './Pages/ErrorPage.tsx'
+import Contact from "./Pages/Contact Page/ContactPage.tsx";
+import Career from "./Pages/Career Page/CareerPage.tsx";
+import NotFoundPage from './Pages/Not Found Page/NotFoundPage.tsx'
 import Become_an_InstructorPage from "./Pages/Become an Instructor Page/Become_an_InstructorPage.tsx"
 
 const App:React.FC = () => {
@@ -22,7 +22,7 @@ const App:React.FC = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/become_an_instructor" element={<Become_an_InstructorPage />} />
                     <Route path="/career" element={<Career />} />
-                    <Route path="/notFound" element={<ErrorPage/>} />
+                    <Route path="/notFound" element={<NotFoundPage/>} />
                 </Routes>
             </main>
             <Footer />

@@ -1,33 +1,33 @@
 import React from "react";
-import Button from "../Components/Shared/Button.tsx";
-import Tic from "../assets/icons/Tic.svg";
-import coverImg from "../assets/image/CareerMain.jpg"
-import coverMain from "../assets/image/CarrerImg.jpg"
-import Card from "../Components/Career Page/Card.tsx";
-import icon1 from "../assets/icons/ForkKnifeOrg.svg"
-import icon2 from "../assets/icons/ChartBarHorizontalPur.jpg"
-import icon3 from "../assets/icons/ArmchairGre.svg"
-import icon4 from "../assets/icons/GiftOrg.svg"
-import icon5 from "../assets/icons/CreditCardGre.svg"
-import icon6 from "../assets/icons/HandshakeOrg.svg"
-import icon7 from "../assets/icons/Trophy.svg"
-import icon8 from "../assets/icons/ForkKnifePur.svg"
-import Img1 from "../assets/image/aboutImg1.jpg";
-import Img2 from "../assets/image/aboutImg2.jpg";
-import Img3 from "../assets/image/aboutImg3.jpg";
-import Img4 from "../assets/image/4.jpg";
-import Img5 from "../assets/image/aboutImg5.jpg";
-import Img6 from "../assets/image/aboutImg7.jpg";
-import Img7 from "../assets/image/aboutImg8.jpg";
-import Logo1 from "../assets/icons/Netfixsvg.svg";
-import Logo2 from "../assets/icons/Youtube.svg";
-import Logo3 from "../assets/icons/Google.svg";
-import Logo4 from "../assets/icons/Lenovo.svg";
-import Logo5 from "../assets/icons/Slack.svg";
-import Logo6 from "../assets/icons/Vesion.svg";
-import Logo7 from "../assets/icons/Lemark.svg";
-import Logo8 from "../assets/icons/Microsoft.svg";
-import PositionCard from "../Components/Contact Page/PositionsCard.tsx";
+import Button from "../../Components/Shared/Button.tsx";
+import Tic from "../../assets/icons/Tic.svg";
+import coverImg from "../../assets/image/CareerMain.jpg"
+import coverMain from "../../assets/image/CarrerImg.jpg"
+import Card from "../../Components/Career Page/Card.tsx";
+import icon1 from "../../assets/icons/ForkKnifeOrg.svg"
+import icon2 from "../../assets/icons/ChartBarHorizontalPur.jpg"
+import icon3 from "../../assets/icons/ArmchairGre.svg"
+import icon4 from "../../assets/icons/GiftOrg.svg"
+import icon5 from "../../assets/icons/CreditCardGre.svg"
+import icon6 from "../../assets/icons/HandshakeOrg.svg"
+import icon7 from "../../assets/icons/Trophy.svg"
+import icon8 from "../../assets/icons/ForkKnifePur.svg"
+import Img1 from "../../assets/image/aboutImg1.jpg";
+import Img2 from "../../assets/image/aboutImg2.jpg";
+import Img3 from "../../assets/image/aboutImg3.jpg";
+import Img4 from "../../assets/image/4.jpg";
+import Img5 from "../../assets/image/aboutImg5.jpg";
+import Img6 from "../../assets/image/aboutImg7.jpg";
+import Img7 from "../../assets/image/aboutImg8.jpg";
+import Logo1 from "../../assets/icons/Netfixsvg.svg";
+import Logo2 from "../../assets/icons/Youtube.svg";
+import Logo3 from "../../assets/icons/Google.svg";
+import Logo4 from "../../assets/icons/Lenovo.svg";
+import Logo5 from "../../assets/icons/Slack.svg";
+import Logo6 from "../../assets/icons/Vesion.svg";
+import Logo7 from "../../assets/icons/Lemark.svg";
+import Logo8 from "../../assets/icons/Microsoft.svg";
+import PositionCard from "../../Components/Contact Page/PositionsCard.tsx";
 
 const companyLogos = [Logo1,Logo2,Logo3,Logo4,Logo5,Logo6,Logo7,Logo8]
 const companyList: React.JSX.Element[] = companyLogos.map(logo =>(

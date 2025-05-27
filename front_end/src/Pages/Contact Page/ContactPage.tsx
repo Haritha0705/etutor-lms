@@ -1,14 +1,14 @@
 import React from "react";
-import coverImg from "../assets/image/ContactMain.jpg"
-import Button from "../Components/Shared/Button.tsx";
-import Email from "../assets/icons/email.svg";
-import Card from "../Components/Contact Page/Card.tsx";
-import Img1 from "../assets/image/ContactImage1.jpg"
-import Img2 from "../assets/image/ContactImage2.jpg"
-import Img3 from "../assets/image/ContactImage3.jpg"
-import Img4 from "../assets/image/ContactImage4.jpg"
-import Rocket from "../assets/icons/PaperPlaneRight.svg"
-import Map from  "../assets/image/Mao.jpg"
+import coverImg from "../../assets/image/ContactMain.jpg"
+import Button from "../../Components/Shared/Button.tsx";
+import Email from "../../assets/icons/email.svg";
+import Card from "../../Components/Contact Page/Card.tsx";
+import Img1 from "../../assets/image/ContactImage1.jpg"
+import Img2 from "../../assets/image/ContactImage2.jpg"
+import Img3 from "../../assets/image/ContactImage3.jpg"
+import Img4 from "../../assets/image/ContactImage4.jpg"
+import Rocket from "../../assets/icons/PaperPlaneRight.svg"
+import Map from "../../assets/image/Mao.jpg"
 
 
 const Contact:React.FC = ()=> {
