@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Components/Button.tsx";
+import Button from "../Components/Shared/Button.tsx";
 import error from "../assets/image/404error.svg";
 
 

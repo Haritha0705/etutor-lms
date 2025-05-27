@@ -1,7 +1,7 @@
-import star from '../assets/icons/Star.svg'
-import clock from '../assets/icons/Clock.svg'
-import signel from '../assets/icons/bar-chart.svg'
-import user from '../assets/icons/User.svg'
+import star from '../../assets/icons/Star.svg'
+import clock from '../../assets/icons/Clock.svg'
+import signel from '../../assets/icons/bar-chart.svg'
+import user from '../../assets/icons/User.svg'
 import React from "react";
 
 interface featureCoursesCardProps {

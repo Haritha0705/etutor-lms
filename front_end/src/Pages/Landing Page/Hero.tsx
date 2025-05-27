@@ -1,8 +1,8 @@
-import Button from "../../Components/Button.tsx";
-import CategoryCard from "../../Components/CategoryCard.tsx";
-import CoursesCards from "../../Components/CoursesCards.tsx";
-import FeatureCoursesCard from "../../Components/FeatureCoursesCard.tsx";
-import InstructorCard from "../../Components/InstructorCard.tsx";
+import Button from "../../Components/Shared/Button.tsx";
+import CategoryCard from "../../Components/Landing Page/CategoryCard.tsx";
+import CoursesCards from "../../Components/Landing Page/CoursesCards.tsx";
+import FeatureCoursesCard from "../../Components/Landing Page/FeatureCoursesCard.tsx";
+import InstructorCard from "../../Components/Landing Page/InstructorCard.tsx";
 import hero_main from '../../assets/image/Images.jpg';
 import hand from '../../assets/icons/Handshake.svg'
 import camera from '../../assets/icons/Camera.svg'

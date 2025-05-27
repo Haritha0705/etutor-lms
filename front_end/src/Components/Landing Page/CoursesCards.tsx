@@ -1,5 +1,5 @@
 import React from "react";
-import star from '../assets/icons/Star.svg';
+import star from '../../assets/icons/Star.svg';
 
 interface CoursesCardsProps {
     img: string;

@@ -1,4 +1,4 @@
-import star from '../assets/icons/Star.svg';
+import star from '../../assets/icons/Star.svg';
 import React from "react";
 
 interface instructorCardprops {

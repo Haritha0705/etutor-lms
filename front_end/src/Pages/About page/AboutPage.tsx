@@ -16,7 +16,7 @@ import Icon2 from  "../../assets/icons/Notebook.svg"
 import Icon5 from  "../../assets/icons/Stack.svg"
 
 import img2 from "../../assets/image/about2.png"
-import Button from "../../Components/Button.tsx";
+import Button from "../../Components/Shared/Button.tsx";
 import Arrow from "../../assets/icons/ArrowRightW.svg"
 
 import Img1 from "../../assets/image/aboutImg1.jpg"

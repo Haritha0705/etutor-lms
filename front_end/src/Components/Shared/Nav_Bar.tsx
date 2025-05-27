@@ -1,17 +1,17 @@
-import logo from '../assets/icons/GraduationCap.svg';
-import bell from '../assets/icons/BellSimple.svg';
-import hart from '../assets/icons/Heart.svg';
-import cart from '../assets/icons/ShoppingCart.svg';
-import search from '../assets/icons/MagnifyingGlass.svg';
-import down from '../assets/icons/ChevronDown.svg';
-import Button from "./Button.jsx";
+import logo from '../../assets/icons/GraduationCap.svg';
+import bell from '../../assets/icons/BellSimple.svg';
+import hart from '../../assets/icons/Heart.svg';
+import cart from '../../assets/icons/ShoppingCart.svg';
+import search from '../../assets/icons/MagnifyingGlass.svg';
+import down from '../../assets/icons/ChevronDown.svg';
+import Button from "./Button.tsx";
 import { Link, useLocation } from 'react-router-dom';
 import React from "react";
 
 const Nav_Bar:React.FC = ()=> {
     const location = useLocation(); // 👈 for active styling
-    const pages = ['Home', 'Courses', 'About', 'Contact', 'Become a Instructor'];
-    const pagesLink = ['/', '/courses', '/about', '/contact', '/instructor'];
+    const pages = ['Home', 'Courses', 'About', 'Contact', 'Become an Instructor'];
+    const pagesLink = ['/', '/courses', '/about', '/contact', '/become_an_instructor'];
 
     const pageList = pages.map((page, index) => {
         const isActive = location.pathname === pagesLink[index];

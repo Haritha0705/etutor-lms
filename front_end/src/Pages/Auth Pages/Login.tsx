@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Components/Button.jsx";
+import Button from "../../Components/Shared/Button.tsx";
 import logo from '../../assets/icons/GraduationCap.svg';
 import loginImg from '../../assets/image/login.jpg';
 import Google from '../../assets/icons/googleLogo.svg';

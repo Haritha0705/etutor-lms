@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Components/Button.tsx";
+import Button from "../Components/Shared/Button.tsx";
 import Tic from "../assets/icons/Tic.svg";
 import coverImg from "../assets/image/CareerMain.jpg"
 import coverMain from "../assets/image/CarrerImg.jpg"

@@ -1,15 +1,15 @@
 import React from "react";
 
-import Logo from '../assets/icons/GraduationCap.svg';
-import Facebook from '../assets/icons/Facebook.svg';
-import Instagram from '../assets/icons/Instragarm.svg'; // FIXED spelling
-import LinkedIn from '../assets/icons/Linkedin.svg';
-import Twitter from '../assets/icons/Twitter.svg';
-import Youtube from '../assets/icons/YoutubeIcon.svg';
-import Apple from '../assets/icons/apple 1.svg';
-import Android from '../assets/icons/google-play-5 1.svg';
-import Arrow from '../assets/icons/ArrowRightW.svg';
-import CartDown from '../assets/icons/CaretDown.svg';
+import Logo from '../../assets/icons/GraduationCap.svg';
+import Facebook from '../../assets/icons/Facebook.svg';
+import Instagram from '../../assets/icons/Instragarm.svg'; // FIXED spelling
+import LinkedIn from '../../assets/icons/Linkedin.svg';
+import Twitter from '../../assets/icons/Twitter.svg';
+import Youtube from '../../assets/icons/YoutubeIcon.svg';
+import Apple from '../../assets/icons/apple 1.svg';
+import Android from '../../assets/icons/google-play-5 1.svg';
+import Arrow from '../../assets/icons/ArrowRightW.svg';
+import CartDown from '../../assets/icons/CaretDown.svg';
 import {Link} from "react-router-dom";
 
 const Footer: React.FC = () => {

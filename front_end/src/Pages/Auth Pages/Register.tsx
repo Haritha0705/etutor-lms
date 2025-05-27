@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Components/Button.tsx";
+import Button from "../../Components/Shared/Button.tsx";
 import logo from '../../assets/icons/GraduationCap.svg';
 import registerImg from '../../assets/image/Register.svg';
 import Google from '../../assets/icons/googleLogo.svg';

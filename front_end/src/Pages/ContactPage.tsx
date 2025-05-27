@@ -1,6 +1,6 @@
 import React from "react";
 import coverImg from "../assets/image/ContactMain.jpg"
-import Button from "../Components/Button.tsx";
+import Button from "../Components/Shared/Button.tsx";
 import Email from "../assets/icons/email.svg";
 import Card from "../Components/Contact Page/Card.tsx";
 import Img1 from "../assets/image/ContactImage1.jpg"
