@@ -8,7 +8,7 @@ import About from "./Pages/About page/AboutPage.tsx";
 import Contact from "./Pages/ContactPage.tsx";
 import Career from "./Pages/Career Page.tsx";
 import ErrorPage from './Pages/ErrorPage.tsx'
-import Become_an_InstructorPage from "./Pages/Become_an_InstructorPage.tsx"
+import Become_an_InstructorPage from "./Pages/Become an Instructor Page/Become_an_InstructorPage.tsx"
 
 const App:React.FC = () => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Components/Shared/Button.tsx";
-import coverImg from "../assets/image/CareerMain.jpg";
+import Button from "../../Components/Shared/Button.tsx";
+import coverImg from "../../assets/image/CareerMain.jpg";
 
 const Become_an_InstructorPage:React.FC = ()=> {
     return (
