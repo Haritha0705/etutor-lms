@@ -52,6 +52,7 @@ const logoCard:React.JSX.Element[] = logoData.map(((item,index)=>(
     </div>
 )))
 
+
 const About:React.FC = ()=> {
 
     return (
