@@ -14,8 +14,24 @@ import icon2 from "../../assets/icons/IDCard.svg";
 import icon4 from "../../assets/icons/Handshake.svg";
 import icon3 from "../../assets/icons/play.svg";
 import imgCov from "../../assets/image/UnionImg.jpg";
-import imgCov2 from "../../assets/image/Union2.jpg";
+import imgCovPart1 from "../../assets/image/ImagePart1.jpg";
+import imgCovPart2 from "../../assets/image/ImagePart2.jpg";
 import Arrow from "../../assets/icons/ArrowRight.svg"
+import Arrow1 from "../../assets/icons/ArrowRightW.svg"
+import Arrow2 from "../../assets/icons/ArrowRight2.svg"
+import Email from "../../assets/icons/Envelope.svg"
+import Quotes from "../../assets/icons/Group2.svg"
+import bgNew from "../../assets/image/Unionnew.png"
+
+
+import Instcter1 from "../../assets/image/03.jpg"
+import Instcter2 from "../../assets/image/06.jpg"
+import Instcter3 from "../../assets/image/07.jpg"
+import Instcter4 from "../../assets/image/08.jpg"
+import Instcter5 from "../../assets/image/Image Instracter 1.jpg"
+import Instcter6 from "../../assets/image/Image Instracter 2.jpg"
+import Instcter7 from "../../assets/image/Image Instracter 3.jpg"
+import Instcter8 from "../../assets/image/Image Instracter 4.jpg"
 
 const logoData = [
     { icon: Icon1, value: '67.1k', label: 'Students' },
@@ -116,7 +132,10 @@ const Become_an_InstructorPage:React.FC = ()=> {
                 <img src={imgCov} className={'w-[500px] h-full'}/>
             </div>
             <div className={'bg-orange-200/30 w-full flex flex-row items-center justify-between  py-20 px-56'}>
-                <img src={imgCov2} className={'w-[500px] h-full'}/>
+                <div className={'flex flex-row items-end gap-5'}>
+                    <img src={imgCovPart1} className={'w-[300px] h-full'}/>
+                    <img src={imgCovPart2} className={'w-[300px] h-full'}/>
+                </div>
                 <div className={'flex flex-col gap-5 max-w-md'}>
                     <h3 className={'text-start text-4xl font-semibold'}>Don’t worry we’re always here to help you</h3>
                     <p className={'text-gray-600'}>Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus nec augue malesuada, sagittis ligula vel, faucibus metus. Nam viverra metus eget nunc dignissim.</p>
@@ -138,16 +157,58 @@ const Become_an_InstructorPage:React.FC = ()=> {
                             <li className={'text-sm'}>Duis ornare enim ullamcorper congue.</li>
                         </div>
                     </ul>
-                    <div>
-                        <div>
-                            <img/>
+                    <div className={'flex gap-5'}>
+                        <div className={'flex flex-row justify-center items-center p-3 rounded-full bg-white'}>
+                            <img src={Email}/>
                         </div>
                         <div>
-                            <p>Email us, anytime anywhere</p>
+                            <p className={'text-gray-400 text-sm'}>Email us, anytime anywhere</p>
                             <p>help.eduguard@gamil.com</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={'w-full flex flex-row items-center justify-between  py-20 px-56'}>
+                <div className={'max-w-md gap-5 flex flex-col'}>
+                    <h3 className={'text-start text-4xl font-semibold'}>20k+ Instructor created their success story with eduguard</h3>
+                    <p className={'text-gray-600 text-lg'}>Nunc euismod sapien non felis eleifend porttitor. Maecenas dictum eros justo, id commodo ante laoreet nec. Phasellus aliquet, orci id pellentesque mollis.</p>
+                    <div className={'bg-orange-500/30 flex flex-col p-10 gap-5'}>
+                        <img src={Quotes} className={'w-10'}/>
+                        <p className={'text-lg'}>Nulla sed malesuada augue. Morbi interdum vulputate imperdiet. Pellentesque ullamcorper auctor ante, egestas interdum quam facilisis commodo. Phasellus efficitur quis ex in consectetur. Mauris tristique suscipit metus, a molestie dui dapibus vel.</p>
+                    </div>
+                    <div className={'flex gap-3'}>
+                        <button className={'flex flex-col justify-center items-center p-2 bg-gray-300/30 shadow-2xl'}><img src={Arrow2}/></button>
+                        <button className={'flex flex-col justify-center items-center p-2 bg-orange-500 shadow-2xl'}><img src={Arrow1} className={'w-6'}/></button>
+                    </div>
+                </div>
+                <div className={'flex gap-5'}>
+                    <div className={'flex flex-col gap-5'}>
+                        <div className={'flex justify-between items-end flex-row'}>
+                            <img src={Instcter6} className={'w-48 h-48'}/>
+                            <img src={Instcter7} className={'w-52 h-56'}/>
+                        </div>
+                        <div className={'flex'}>
+                            <img src={Instcter3}/>
+                        </div>
+                        <div className={'flex justify-between items-start flex-row'}>
+                            <img src={Instcter8} className={'w-48 h-48'}/>
+                            <img src={Instcter1} className={'w-52 h-80'}/>
+                        </div>
+                    </div>
+                    <div className={'flex flex-col gap-5 justify-center'}>
+                        <img src={Instcter4} className={'w-48'}/>
+                        <img src={Instcter2} className={'w-72'}/>
+                        <img src={Instcter5} className={'w-48'}/>
+                    </div>
+                </div>
+            </div>
+            <div className={'bg-gray-900 w-full flex flex-row items-center justify-between  py-20 px-56'}>
+                <div className={'flex flex-col gap-7 max-w-md'}>
+                    <h3 className={'text-start text-4xl text-white font-semibold'}>Start teaching with us and inspire others</h3>
+                    <p className={'text-gray-400 text-lg'}>Become an instructor & start teaching with 26k certified instructors. Create a success story with 67.1k Students — Grow yourself with 71 countries.</p>
+                    <Button text={'Register now'} className={'justify-center'}/>
+                </div>
+                <img src={bgNew} className={'w-[500px] h-full'}/>
             </div>
         </section>
     );
