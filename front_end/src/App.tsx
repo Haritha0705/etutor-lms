@@ -22,7 +22,7 @@ const App:React.FC = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/become_an_instructor" element={<Become_an_InstructorPage />} />
                     <Route path="/career" element={<Career />} />
-                    <Route path="/notFound" element={<NotFoundPage/>} />
+                    <Route path="*" element={<NotFoundPage/>} />
                 </Routes>
             </main>
             <Footer />
