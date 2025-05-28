@@ -14,6 +14,8 @@ import icon2 from "../../assets/icons/IDCard.svg";
 import icon4 from "../../assets/icons/Handshake.svg";
 import icon3 from "../../assets/icons/play.svg";
 import imgCov from "../../assets/image/UnionImg.jpg";
+import imgCov2 from "../../assets/image/Union2.jpg";
+import Arrow from "../../assets/icons/ArrowRight.svg"
 
 
 const logoData = [
@@ -51,7 +53,7 @@ const Become_an_InstructorPage:React.FC = ()=> {
                         <img src={coverImg} className={'w-[600px] h-[600px]'}/>
                     </div>
                 </div>
-                <div className={'w-full py-10  items-center px-56 bottom-3 left-0 right-0 absolute flex flex-col gap-20 bg-orange-300/30'}>
+                <div className={'w-full py-10  items-center px-56 bottom-3 left-0 right-0 absolute flex flex-col gap-20 bg-orange-200/30'}>
                     <div className={'flex w-full justify-between'}>
                         {logoCard}
                     </div>
@@ -101,19 +103,51 @@ const Become_an_InstructorPage:React.FC = ()=> {
                     <Card icon={icon4} title={'4. Start teaching & earning'} subText={'Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque. '} bgColor={'bg-green-300/30'}/>
                 </div>
             </div>
-            <div>
-                <div className={'w-full flex flex-row items-center justify-between  py-20 px-56'}>
-                    <div className={'flex flex-col gap-5 max-w-md'}>
-                        <h3 className={'text-start text-4xl font-semibold'}>Instructor rules & regulations</h3>
-                        <p className={'text-gray-600'}>Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem. </p>
-                        <ul className={'list-disc flex flex-col gap-2'}>
-                            <li>Sed ullamcorper libero quis condimentum pellentesque.</li>
-                            <li>Nam leo tortor, tempus et felis non.</li>
-                            <li>Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.</li>
-                            <li>Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.</li>
-                        </ul>
+            <div className={'w-full flex flex-row items-center justify-between  py-20 px-56'}>
+                <div className={'flex flex-col gap-5 max-w-md'}>
+                    <h3 className={'text-start text-4xl font-semibold'}>Instructor rules & regulations</h3>
+                    <p className={'text-gray-600 text-lg'}>Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem. </p>
+                    <ul className={'list-disc flex flex-col gap-2'}>
+                        <li>Sed ullamcorper libero quis condimentum pellentesque.</li>
+                        <li>Nam leo tortor, tempus et felis non.</li>
+                        <li>Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.</li>
+                        <li>Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.</li>
+                    </ul>
+                </div>
+                <img src={imgCov} className={'w-[500px] h-full'}/>
+            </div>
+            <div className={'bg-orange-200/30 w-full flex flex-row items-center justify-between  py-20 px-56'}>
+                <img src={imgCov2} className={'w-[500px] h-full'}/>
+                <div className={'flex flex-col gap-5 max-w-md'}>
+                    <h3 className={'text-start text-4xl font-semibold'}>Don’t worry we’re always here to help you</h3>
+                    <p className={'text-gray-600'}>Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus nec augue malesuada, sagittis ligula vel, faucibus metus. Nam viverra metus eget nunc dignissim.</p>
+                    <ul className={'flex flex-col gap-2'}>
+                        <div className={'flex gap-2'}>
+                            <img src={Arrow}/>
+                            <li className={'text-sm'}>Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.</li>
+                        </div>
+                        <div className={'flex gap-2'}>
+                            <img src={Arrow}/>
+                            <li className={'text-sm'}>Those who are looking to reboot their work life and try a new profession that.</li>
+                        </div>
+                        <div className={'flex gap-2'}>
+                            <img src={Arrow}/>
+                            <li className={'text-sm'}>Nunc auctor consequat lorem, in posuere enim hendrerit sed.</li>
+                        </div>
+                        <div className={'flex gap-2'}>
+                            <img src={Arrow}/>
+                            <li className={'text-sm'}>Duis ornare enim ullamcorper congue.</li>
+                        </div>
+                    </ul>
+                    <div>
+                        <div>
+                            <img/>
+                        </div>
+                        <div>
+                            <p>Email us, anytime anywhere</p>
+                            <p>help.eduguard@gamil.com</p>
+                        </div>
                     </div>
-                    <img src={imgCov} className={'w-[500px] h-full'}/>
                 </div>
             </div>
         </section>
