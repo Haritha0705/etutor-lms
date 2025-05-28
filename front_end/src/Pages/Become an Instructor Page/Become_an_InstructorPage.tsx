@@ -17,7 +17,6 @@ import imgCov from "../../assets/image/UnionImg.jpg";
 import imgCov2 from "../../assets/image/Union2.jpg";
 import Arrow from "../../assets/icons/ArrowRight.svg"
 
-
 const logoData = [
     { icon: Icon1, value: '67.1k', label: 'Students' },
     { icon: Icon2, value: '26k', label: 'Certified Instructor' },
