@@ -8,6 +8,13 @@ import Icon4 from "../../assets/icons/CircleWavyCheck.svg";
 import Icon5 from "../../assets/icons/Stack.svg";
 import coverPC from "../../assets/image/Imageinstracter2.jpg";
 import Tic from "../../assets/icons/Tic.svg";
+import Card from "../../Components/Become an Instructor Page/Card.tsx";
+import icon1 from "../../assets/icons/Newspaper.svg";
+import icon2 from "../../assets/icons/IDCard.svg";
+import icon4 from "../../assets/icons/Handshake.svg";
+import icon3 from "../../assets/icons/play.svg";
+import imgCov from "../../assets/image/UnionImg.jpg";
+
 
 const logoData = [
     { icon: Icon1, value: '67.1k', label: 'Students' },
@@ -85,10 +92,28 @@ const Become_an_InstructorPage:React.FC = ()=> {
                     </div>
                 </div>
             </div>
-            <div className={'bg-gray-300/20 flex flex-col items-center justify-center gap-10 py-10 px-56'}>
+            <div className={'bg-gray-300/20 flex flex-col items-center justify-center gap-10 py-20 px-56'}>
                 <h1 className={'text-4xl max-w-md font-semibold text-center'}>How you'll become successful instructor</h1>
-                <div>
-
+                <div className={'grid grid-cols-4 gap-5'}>
+                    <Card icon={icon1} title={'1. Apply to become instructor.'} subText={'Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.'} bgColor={'bg-purple-300/30'}/>
+                    <Card icon={icon2} title={'2. Setup & edit your profile.'} subText={'Duis non ipsum at leo efficitur pulvinar. Morbi semper nisi eget accumsan ullamcorper.'} bgColor={'bg-red-300/30'}/>
+                    <Card icon={icon3} title={'3. Create your new course'} subText={'Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque. '} bgColor={'bg-orange-300/30'}/>
+                    <Card icon={icon4} title={'4. Start teaching & earning'} subText={'Praesent congue ornare nibh sed ullamcorper. Proin venenatis tellus non turpis scelerisque. '} bgColor={'bg-green-300/30'}/>
+                </div>
+            </div>
+            <div>
+                <div className={'w-full flex flex-row items-center justify-between  py-20 px-56'}>
+                    <div className={'flex flex-col gap-5 max-w-md'}>
+                        <h3 className={'text-start text-4xl font-semibold'}>Instructor rules & regulations</h3>
+                        <p className={'text-gray-600'}>Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem. </p>
+                        <ul className={'list-disc flex flex-col gap-2'}>
+                            <li>Sed ullamcorper libero quis condimentum pellentesque.</li>
+                            <li>Nam leo tortor, tempus et felis non.</li>
+                            <li>Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.</li>
+                            <li>Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.</li>
+                        </ul>
+                    </div>
+                    <img src={imgCov} className={'w-[500px] h-full'}/>
                 </div>
             </div>
         </section>
