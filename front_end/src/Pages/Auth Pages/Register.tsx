@@ -7,7 +7,6 @@ import Facebook from '../../assets/icons/FacebookLogo.svg';
 import Apple from '../../assets/icons/AppleLogo.svg';
 import Arrow from '../../assets/icons/ArrowRightW.svg';
 
-
 const Register:React.FC = ()=> {
     return (
         <div className="min-h-screen w-full bg-white flex flex-col">
