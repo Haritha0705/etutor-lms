@@ -1,4 +1,4 @@
-// import CoursesCards from "../../Components/CoursesCards.tsx";
+// import CoursesCards from "../../Components/Landing Page/CategoryCard.tsx";
 // import c1Img from "../../assets/image/Course Images1.jpg";
 // import c2Img from "../../assets/image/Course Images2.jpg";
 // import c3Img from "../../assets/image/Course Images3.jpg";
@@ -14,7 +14,7 @@
 // import search from "../../assets/icons/MagnifyingGlass.svg";
 // import down from "../../assets/icons/ChevronDown.svg";
 //
-//import React from "react";
+// import React from "react";
 // import cpu from "../../assets/icons/Cpu.svg";
 // import hand from "../../assets/icons/Handshake.svg";
 // import card from "../../assets/icons/CreditCard.svg";
@@ -27,6 +27,8 @@
 // import camera from "../../assets/icons/Camera.svg";
 // import music from "../../assets/icons/Headphones.svg";
 // import kit from "../../assets/icons/FirstAidKit.svg";
+// import {useState} from "react";
+//
 //
 //
 //
@@ -262,190 +264,187 @@
 //     icon: string ;
 //     subCategories?: SubCategory[];
 // };
-// interface Props {
+// interface coursesP {
 //     allData: Category[];
 //     toggleSub: (index: number) => void;
 // }
-
-const Courses:React.FC = ()=> {
-
-
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const CARDS_PER_PAGE = 12;
-    // const totalPages = Math.ceil(coursesCards.length / CARDS_PER_PAGE);
-    //
-    // const handleClick = (page:number) => {
-    //     if (page >= 1 && page <= totalPages) {
-    //         setCurrentPage(page);
-    //     }
-    // };
-    //
-    // const paginatedCourses = coursesCards.slice(
-    //     (currentPage - 1) * CARDS_PER_PAGE,
-    //     currentPage * CARDS_PER_PAGE
-    // );
-    //
-    // const courseName = "ui/ux design";
-    // const studentCount = 3145684;
-    // const suggestions = "user interface";
-    // const number_of_filter = 3;
-    //
-    // const [isVisible, setIsVisible] = useState(false);
-    // const [openSub, setOpenSub] = useState<number|null>(null);
-    // const [openNested, setOpenNested] = useState<number|null>(null);
-    //
-    // const toggleSub = (index:number|null) => {
-    //     setOpenSub(openSub === index ? null : index);
-    // };
-    //
-    // const toggleNested = (index:number|null) => {
-    //     setOpenNested(openNested === index ? null : index);
-    // };
-
-
-
-    return (
-        <h1>fg</h1>
-        // <div className="pb-20 pt-5 px-20 w-full">
-        //     <div className="relative">
-        //         <div className="absolute w-full h-[0.1rem] bg-gray-400/30 bottom-5 left-0 right-0"></div>
-        //         <div className="flex justify-between py-5">
-        //             <div className="flex gap-x-6">
-        //                 <button onClick={() => setIsVisible(!isVisible)} className="flex items-center justify-between px-6 border w-[160px] h-[40px] text-base border-orange-500/30 text-orange-500 hover:bg-orange-100">
-        //                     <img src={filter} alt="Filter Icon" className="w-5 h-5 mr-2" />
-        //                     <span className="flex-1 text-left">Filter</span>
-        //                     <span className="ml-2 bg-orange-500 w-6 h-6 flex items-center justify-center text-white text-[10px]">{number_of_filter}</span>
-        //                 </button>
-        //                 <div className="relative flex items-center">
-        //                     <input
-        //                         className="border pr-4 pl-10 py-2 rounded w-64 text-sm border-gray-200"
-        //                         placeholder="UI/UX Design"
-        //                     />
-        //                     <img
-        //                         src={search}
-        //                         alt="Search icon"
-        //                         className="w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-        //                     />
-        //                 </div>
-        //             </div>
-        //
-        //             <div className="flex items-center gap-x-3">
-        //                 <span>Sort by:</span>
-        //                 <div className="relative flex items-center">
-        //                     <input
-        //                         className="border px-4 py-2 rounded w-44 pr-10 text-sm border-gray-400"
-        //                         placeholder="Trending"
-        //                     />
-        //                     <img
-        //                         src={down}
-        //                         alt="Down arrow"
-        //                         className="w-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-        //                     />
-        //                 </div>
-        //             </div>
-        //         </div>
-        //
-        //         <div className="flex gap-x-3 justify-between items-center pb-10">
-        //             <div className="flex gap-x-3">
-        //                 <span className="text-gray-500">Suggestion:</span>
-        //                 <p className="text-orange-500">{suggestions}</p>
-        //             </div>
-        //             <p className="text-gray-500">
-        //                 <span className="text-black">{studentCount.toLocaleString()}</span> results found for{" "}
-        //                 <span className="text-gray-500">{courseName}</span>
-        //             </p>
-        //         </div>
-        //     </div>
-        //
-        //     <div className="flex">
-        //         <div className="pr-10">
-        //             {isVisible && (
-        //                 <div className="w-64 p-4 shadow-xl">
-        //                     {allData.map((category:any, index:number) => (
-        //                         <div key={index} className="mb-2">
-        //                             <button onClick={() => toggleSub(index)} className="w-full text-left flex items-center justify-between p-2 bg-white rounded hover:bg-gray-100 focus:outline-none">
-        //                                 <span className="flex items-center text-xl">
-        //                                     {typeof category.icon === "string" ? (
-        //                                         <span className="mr-2">{category.icon}</span>
-        //                                     ) : (
-        //                                         <span className="mr-2">{category.icon}</span>
-        //                                     )}
-        //                                     <span className={index === 0 ? "text-orange-500" : "text-gray-700"}>
-        //                                         {category.name}
-        //                                     </span>
-        //                                 </span>
-        //                                 <svg className={`w-4 h-4 transform ${openSub === index ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-        //                             </button>
-        //                             {openSub === index && (
-        //                                 <div className="pl-6">
-        //                                     {category.subCategories.map((sub:any, subIndex:number) => (
-        //                                         <div key={subIndex} className="mb-1">
-        //                                             {sub.nestedCategories ? (
-        //                                                 <>
-        //                                                     <button onClick={() => toggleNested(subIndex)} className="w-full text-left flex items-center justify-between p-2 text-gray-600 hover:bg-gray-50 focus:outline-none">
-        //                                                         <span className="flex items-center">
-        //                                                             {sub.icon && <span className="mr-2">{sub.icon}</span>}
-        //                                                             {sub.name}
-        //                                                         </span>
-        //                                                         <svg className={`w-3 h-3 transform ${openNested === subIndex ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-        //                                                     </button>
-        //                                                     {openNested === subIndex && (
-        //                                                         <div className="pl-4">
-        //                                                             {sub.nestedCategories.map((nested:any, nestedIndex:number) => (
-        //                                                                 <div key={nestedIndex} className="flex justify-between items-center p-2 text-gray-600 hover:bg-gray-50">
-        //                                                                     <label className="flex items-center">
-        //                                                                         <input type="checkbox" className="mr-2" />
-        //                                                                         {nested.name}
-        //                                                                     </label>
-        //                                                                     <span className="text-sm">{nested.count}</span>
-        //                                                                 </div>
-        //                                                             ))}
-        //                                                         </div>
-        //                                                     )}
-        //                                                 </>
-        //                                             ) : (
-        //                                                 <div className="flex justify-between items-center p-2 text-gray-600 hover:bg-gray-50">
-        //                                                     <label className="flex items-center">
-        //                                                         <input type="checkbox" className="mr-2" />
-        //                                                         {sub.name}
-        //                                                     </label>
-        //                                                     <span className="text-sm">{sub.count}</span>
-        //                                                 </div>
-        //                                             )}
-        //                                         </div>
-        //                                     ))}
-        //                                 </div>
-        //                             )}
-        //                         </div>
-        //                     ))}
-        //                 </div>
-        //             )}
-        //         </div>
-        //         <div className={`${isVisible ? "w-3/4" : "w-full"} grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}>
-        //             {paginatedCourses.map(
-        //                 ([img, category, text, categoryColour, categoryTextColour, price, rating, studentCount], i) => (
-        //                     <CoursesCards key={i} img={img} category={category} text={text} categoryColour={categoryColour} categoryTextColour={categoryTextColour} price={price} rating={rating} studentCount={studentCount}/>)
-        //             )}
-        //         </div>
-        //     </div>
-        //
-        //     <div className="flex justify-center items-center mt-10 space-x-2">
-        //         <button onClick={() => handleClick(currentPage - 1)} disabled={currentPage === 1} className="px-4 py-2 disabled:opacity-50 hover:bg-orange-300/30 hover:text-orange-500 rounded-full text-orange-600">←</button>
-        //         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-        //             <button
-        //                 key={page}
-        //                 onClick={() => handleClick(page)}
-        //                 className={`px-3 py-2 rounded-full ${
-        //                     currentPage === page ? "bg-orange-500 hover:bg-orange-600 text-white" : "bg-white hover:bg-orange-300/30 hover:text-orange-500"
-        //                 }`}
-        //             >
-        //                 {String(page).padStart(2, "0")}
-        //             </button>
-        //         ))}
-        //         <button onClick={() => handleClick(currentPage + 1)} disabled={currentPage === totalPages} className="px-4 py-2 disabled:opacity-50 hover:bg-orange-300/30 hover:text-orange-500 rounded-full text-orange-600">→</button>
-        //     </div>
-        // </div>
-    );
-}
-
-export default Courses;
+//
+// const [currentPage, setCurrentPage] = useState(1);
+// const CARDS_PER_PAGE = 12;
+// const totalPages = Math.ceil(coursesCards.length / CARDS_PER_PAGE);
+//
+// const handleClick = (page:number) => {
+//     if (page >= 1 && page <= totalPages) {
+//         setCurrentPage(page);
+//     }
+// };
+//
+// const paginatedCourses = coursesCards.slice(
+//     (currentPage - 1) * CARDS_PER_PAGE,
+//     currentPage * CARDS_PER_PAGE
+// );
+//
+// const courseName = "ui/ux design";
+// const studentCount = 3145684;
+// const suggestions = "user interface";
+// const number_of_filter = 3;
+//
+// const [isVisible, setIsVisible] = useState(false);
+// const [openSub, setOpenSub] = useState<number|null>(null);
+// const [openNested, setOpenNested] = useState<number|null>(null);
+//
+// const toggleSub = (index:number|null) => {
+//     setOpenSub(openSub === index ? null : index);
+// };
+//
+// const toggleNested = (index:number|null) => {
+//     setOpenNested(openNested === index ? null : index);
+// };
+//
+//
+// const Courses:React.FC<coursesP> = ({allData,toggleSub})=> {
+//
+//     return (
+//         <div className="pb-20 pt-5 px-20 w-full">
+//             <div className="relative">
+//                 <div className="absolute w-full h-[0.1rem] bg-gray-400/30 bottom-5 left-0 right-0"></div>
+//                 <div className="flex justify-between py-5">
+//                     <div className="flex gap-x-6">
+//                         <button onClick={() => setIsVisible(!isVisible)} className="flex items-center justify-between px-6 border w-[160px] h-[40px] text-base border-orange-500/30 text-orange-500 hover:bg-orange-100">
+//                             <img src={filter} alt="Filter Icon" className="w-5 h-5 mr-2" />
+//                             <span className="flex-1 text-left">Filter</span>
+//                             <span className="ml-2 bg-orange-500 w-6 h-6 flex items-center justify-center text-white text-[10px]">{number_of_filter}</span>
+//                         </button>
+//                         <div className="relative flex items-center">
+//                             <input
+//                                 className="border pr-4 pl-10 py-2 rounded w-64 text-sm border-gray-200"
+//                                 placeholder="UI/UX Design"
+//                             />
+//                             <img
+//                                 src={search}
+//                                 alt="Search icon"
+//                                 className="w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+//                             />
+//                         </div>
+//                     </div>
+//
+//                     <div className="flex items-center gap-x-3">
+//                         <span>Sort by:</span>
+//                         <div className="relative flex items-center">
+//                             <input
+//                                 className="border px-4 py-2 rounded w-44 pr-10 text-sm border-gray-400"
+//                                 placeholder="Trending"
+//                             />
+//                             <img
+//                                 src={down}
+//                                 alt="Down arrow"
+//                                 className="w-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+//                             />
+//                         </div>
+//                     </div>
+//                 </div>
+//
+//                 <div className="flex gap-x-3 justify-between items-center pb-10">
+//                     <div className="flex gap-x-3">
+//                         <span className="text-gray-500">Suggestion:</span>
+//                         <p className="text-orange-500">{suggestions}</p>
+//                     </div>
+//                     <p className="text-gray-500">
+//                         <span className="text-black">{studentCount.toLocaleString()}</span> results found for{" "}
+//                         <span className="text-gray-500">{courseName}</span>
+//                     </p>
+//                 </div>
+//             </div>
+//
+//             <div className="flex">
+//                 <div className="pr-10">
+//                     {isVisible && (
+//                         <div className="w-64 p-4 shadow-xl">
+//                             {allData.map((category:any, index:number) => (
+//                                 <div key={index} className="mb-2">
+//                                     <button onClick={() => toggleSub(index)} className="w-full text-left flex items-center justify-between p-2 bg-white rounded hover:bg-gray-100 focus:outline-none">
+//                                         <span className="flex items-center text-xl">
+//                                             {typeof category.icon === "string" ? (
+//                                                 <span className="mr-2">{category.icon}</span>
+//                                             ) : (
+//                                                 <span className="mr-2">{category.icon}</span>
+//                                             )}
+//                                             <span className={index === 0 ? "text-orange-500" : "text-gray-700"}>
+//                                                 {category.name}
+//                                             </span>
+//                                         </span>
+//                                         <svg className={`w-4 h-4 transform ${openSub === index ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+//                                     </button>
+//                                     {openSub === index && (
+//                                         <div className="pl-6">
+//                                             {category.subCategories.map((sub:any, subIndex:number) => (
+//                                                 <div key={subIndex} className="mb-1">
+//                                                     {sub.nestedCategories ? (
+//                                                         <>
+//                                                             <button onClick={() => toggleNested(subIndex)} className="w-full text-left flex items-center justify-between p-2 text-gray-600 hover:bg-gray-50 focus:outline-none">
+//                                                                 <span className="flex items-center">
+//                                                                     {sub.icon && <span className="mr-2">{sub.icon}</span>}
+//                                                                     {sub.name}
+//                                                                 </span>
+//                                                                 <svg className={`w-3 h-3 transform ${openNested === subIndex ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+//                                                             </button>
+//                                                             {openNested === subIndex && (
+//                                                                 <div className="pl-4">
+//                                                                     {sub.nestedCategories.map((nested:any, nestedIndex:number) => (
+//                                                                         <div key={nestedIndex} className="flex justify-between items-center p-2 text-gray-600 hover:bg-gray-50">
+//                                                                             <label className="flex items-center">
+//                                                                                 <input type="checkbox" className="mr-2" />
+//                                                                                 {nested.name}
+//                                                                             </label>
+//                                                                             <span className="text-sm">{nested.count}</span>
+//                                                                         </div>
+//                                                                     ))}
+//                                                                 </div>
+//                                                             )}
+//                                                         </>
+//                                                     ) : (
+//                                                         <div className="flex justify-between items-center p-2 text-gray-600 hover:bg-gray-50">
+//                                                             <label className="flex items-center">
+//                                                                 <input type="checkbox" className="mr-2" />
+//                                                                 {sub.name}
+//                                                             </label>
+//                                                             <span className="text-sm">{sub.count}</span>
+//                                                         </div>
+//                                                     )}
+//                                                 </div>
+//                                             ))}
+//                                         </div>
+//                                     )}
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     )}
+//                 </div>
+//                 <div className={`${isVisible ? "w-3/4" : "w-full"} grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}>
+//                     {paginatedCourses.map(
+//                         ([img, category, text, categoryColour, categoryTextColour, price, rating, studentCount], i) => (
+//                             <CoursesCards key={i} img={img} category={category} text={text} categoryColour={categoryColour} categoryTextColour={categoryTextColour} price={price} rating={rating} studentCount={studentCount}/>)
+//                     )}
+//                 </div>
+//             </div>
+//
+//             <div className="flex justify-center items-center mt-10 space-x-2">
+//                 <button onClick={() => handleClick(currentPage - 1)} disabled={currentPage === 1} className="px-4 py-2 disabled:opacity-50 hover:bg-orange-300/30 hover:text-orange-500 rounded-full text-orange-600">←</button>
+//                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+//                     <button
+//                         key={page}
+//                         onClick={() => handleClick(page)}
+//                         className={`px-3 py-2 rounded-full ${
+//                             currentPage === page ? "bg-orange-500 hover:bg-orange-600 text-white" : "bg-white hover:bg-orange-300/30 hover:text-orange-500"
+//                         }`}
+//                     >
+//                         {String(page).padStart(2, "0")}
+//                     </button>
+//                 ))}
+//                 <button onClick={() => handleClick(currentPage + 1)} disabled={currentPage === totalPages} className="px-4 py-2 disabled:opacity-50 hover:bg-orange-300/30 hover:text-orange-500 rounded-full text-orange-600">→</button>
+//             </div>
+//         </div>
+//     );
+// }
+//
+// export default Courses;

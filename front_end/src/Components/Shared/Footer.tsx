@@ -54,13 +54,13 @@ const Footer: React.FC = () => {
                     <div>
                         <div className="text-white flex flex-col gap-3">
                             <h4>Quick Links</h4>
-                            <p className="text-gray-500 text-sm">About</p>
+                            <Link className="text-gray-500 text-sm" to={"/about"}>About</Link>
                             <p className="text-sm flex gap-1 items-center relative cursor-pointer">
-                                Become Instructor
+                                <Link to={"/become_an_instructor"}>Become Instructor</Link>
                                 <img src={Arrow} alt="Arrow right" className="w-5 h-5" />
                                 <div className="w-full absolute h-[0.1rem] bg-orange-500 right-0 left-0 bottom-[-5px]"></div>
                             </p>
-                            <p className="text-gray-500 text-sm">Contact</p>
+                            <Link className="text-gray-500 text-sm" to={"/contact"}>Contact</Link>
                             <Link className="text-gray-500 text-sm" to={"/career"}>Career</Link>
                         </div>
                     </div>

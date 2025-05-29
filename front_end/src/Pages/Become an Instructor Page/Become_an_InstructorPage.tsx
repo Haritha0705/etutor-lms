@@ -68,7 +68,7 @@ const Become_an_InstructorPage:React.FC = ()=> {
                         <img src={coverImg} className={'w-[600px] h-[600px]'}/>
                     </div>
                 </div>
-                <div className={'w-full py-10  items-center px-56 bottom-3 left-0 right-0 absolute flex flex-col gap-20 bg-orange-200/30'}>
+                <div className={'w-full py-10  items-center px-56 bottom-[-65px] left-0 right-0 absolute flex flex-col gap-20 bg-orange-200/30'}>
                     <div className={'flex w-full justify-between'}>
                         {logoCard}
                     </div>

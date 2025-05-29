@@ -3,7 +3,7 @@ import CategoryCard from "../../Components/Landing Page/CategoryCard.tsx";
 import CoursesCards from "../../Components/Landing Page/CoursesCards.tsx";
 import FeatureCoursesCard from "../../Components/Landing Page/FeatureCoursesCard.tsx";
 import InstructorCard from "../../Components/Landing Page/InstructorCard.tsx";
-import hero_main from '../../assets/image/Images.jpg';
+import hero_main from "../../assets/image/HeroMain.png";
 import hand from '../../assets/icons/Handshake.svg'
 import camera from '../../assets/icons/Camera.svg'
 import chart from '../../assets/icons/ChartBarHorizontal.svg'
