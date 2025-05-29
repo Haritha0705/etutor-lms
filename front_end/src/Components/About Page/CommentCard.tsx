@@ -10,7 +10,6 @@ interface CardProps {
 
 }
 
-
 const CommentCard:React.FC<CardProps> = ({commentText,name,position,companyName})=>{
     return(
         <div className={'flex flex-col gap-7'}>
