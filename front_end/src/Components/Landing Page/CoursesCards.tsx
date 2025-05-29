@@ -8,7 +8,7 @@ interface CoursesCardsProps {
     categoryColour: string;
     categoryTextColour: string;
     price: string;
-    rating: string; // Consider changing to number if possible
+    rating: string;
     studentCount: string;
 }
 
