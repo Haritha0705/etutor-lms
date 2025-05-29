@@ -23,7 +23,6 @@ import Email from "../../assets/icons/Envelope.svg"
 import Quotes from "../../assets/icons/Group2.svg"
 import bgNew from "../../assets/image/Unionnew.png"
 
-
 import Instcter1 from "../../assets/image/03.jpg"
 import Instcter2 from "../../assets/image/06.jpg"
 import Instcter3 from "../../assets/image/07.jpg"
