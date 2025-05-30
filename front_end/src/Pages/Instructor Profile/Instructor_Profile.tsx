@@ -108,11 +108,16 @@ const Instructor_Profile:React.FC = ()=> {
                         <p>Review</p>
                     </div>
                     <p className={'py-10 text-2xl font-medium'}>Vako Courses (02)</p>
-                    <div className='grid grid-cols-2 gap-5 pb-90'>
+                    <div className='grid grid-cols-3 gap-y-5'>
                         {coursesCards.map(([img,category,text,categoryColour,categoryTextColour,price,rating,studentCount],i)=>(
                             <CoursesCards key={i} img={img} category={category} text={text} categoryColour={categoryColour} categoryTextColour={categoryTextColour} price={price} rating={rating} studentCount={studentCount}/>
                         ))}
                     </div>
+                    <div>
+                        <p className={'py-10 text-2xl font-medium'}>Students Feedback</p>
+
+                    </div>
+
                 </div>
             </div>
         </section>
