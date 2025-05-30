@@ -11,7 +11,22 @@ import instergram from "../../assets/icons/instagramGray.svg"
 import youtube from "../../assets/icons/youtubeGray.svg"
 import whatapp from "../../assets/icons/whatsappGray.svg"
 import world from "../../assets/icons/Globe.svg"
+import CoursesCards from "../../Components/Landing Page/CoursesCards.tsx";
+import c1Img from "../../assets/image/Course Images1.jpg";
+import c2Img from "../../assets/image/Course Images2.jpg";
+import c3Img from "../../assets/image/Course Images3.jpg";
+import c4Img from "../../assets/image/Course Images4.jpg";
+import c5Img from "../../assets/image/Course Images5.jpg";
+import c10Img from "../../assets/image/Course Images10.jpg";
 
+const coursesCards =[
+    [c1Img,'Design','Machine Learning A-Z™: Hands-On Python & R In Data...','bg-red-200/30','text-red-700','$57','5.0','265.7K'],
+    [c2Img,'Developments','The Complete 2021 Web Development Bootcamp','bg-purple-300/30','text-purple-700','$57','5.0','265.7K'],
+    [c3Img,'Business','Learn Python Programming Masterclass','bg-green-200/30','text-green-700','$57','5.0','265.7K'],
+    [c4Img,'Marketing','The Complete Digital Marketing Course - 12 Courses in 1','bg-purple-300/30','text-purple-700','$57','5.0','265.7K'],
+    [c5Img,'IT & Software','Reiki Level I, II and Master/Teacher Program','bg-red-200/30','text-red-700','$57','5.0','265.7K'],
+    [c10Img,'Lifestyle','Google Analytics Certification - Learn How To Pass The Exam','bg-orange-200/30','text-orange-700','$57','5.0','265.7K']
+]
 
 
 const Instructor_Profile:React.FC = ()=> {
@@ -85,16 +100,18 @@ const Instructor_Profile:React.FC = ()=> {
                         <p>Vako realizes that people who take courses on Udemy want to transform their lives. Today with his courses and mentoring Vako is helping thousands of people transform their lives, just like he did once.</p>
                     </div>
                 </div>
-                <div className={'w-2/3 h-screen bg-orange-500 px-10 py-5 relative'}>
-                    <div className={'flex gap-32 text-gray-700'}>
-                        <div className={'w-full absolute top-16 h-[0.01rem] left-0 right-0 bg-gray-200'}></div>
+                <div className={'w-2/3 h-screen  py-5 relative'}>
+                    <div className={'flex px-10 gap-32 text-gray-700'}>
+                        <div className={'w-full absolute top-16 h-[0.02rem] left-0 right-0 bg-gray-200'}></div>
+                        <div className={'w-36 absolute top-16 h-[0.2rem] left-0 bg-orange-500'}></div>
                         <p>Courses</p>
                         <p>Review</p>
                     </div>
                     <p className={'py-10 text-2xl font-medium'}>Vako Courses (02)</p>
-                    <div className={'grid grid-cols-2'}>
-
-
+                    <div className='grid grid-cols-2 gap-5 pb-90'>
+                        {coursesCards.map(([img,category,text,categoryColour,categoryTextColour,price,rating,studentCount],i)=>(
+                            <CoursesCards key={i} img={img} category={category} text={text} categoryColour={categoryColour} categoryTextColour={categoryTextColour} price={price} rating={rating} studentCount={studentCount}/>
+                        ))}
                     </div>
                 </div>
             </div>
