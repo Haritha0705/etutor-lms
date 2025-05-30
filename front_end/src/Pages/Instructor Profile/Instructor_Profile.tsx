@@ -14,7 +14,6 @@ import world from "../../assets/icons/Globe.svg"
 
 
 
-
 const Instructor_Profile:React.FC = ()=> {
 
     return (
