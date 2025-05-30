@@ -86,10 +86,15 @@ const Instructor_Profile:React.FC = ()=> {
                     </div>
                 </div>
                 <div className={'w-2/3 h-screen bg-orange-500 px-10 py-5 relative'}>
-                    <div className={'flex gap-5 text-gray-700'}>
-                        <div className={'w-full absolute bottom-0 h-[0.1rem] left-0 right-0 bg-gray-200'}></div>
+                    <div className={'flex gap-32 text-gray-700'}>
+                        <div className={'w-full absolute top-16 h-[0.01rem] left-0 right-0 bg-gray-200'}></div>
                         <p>Courses</p>
                         <p>Review</p>
+                    </div>
+                    <p className={'py-10 text-2xl font-medium'}>Vako Courses (02)</p>
+                    <div className={'grid grid-cols-2'}>
+
+
                     </div>
                 </div>
             </div>
