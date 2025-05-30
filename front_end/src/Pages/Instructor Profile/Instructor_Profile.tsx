@@ -77,13 +77,19 @@ const Instructor_Profile:React.FC = ()=> {
                     </div>
                 </div>
             </div>
-            <div className={'w-full bg-white pt-10 pb-20 px-[213px]'}>
-                <div className={'border border-gray-400/30 p-5 w-fit'}>
+            <div className={'w-full flex  bg-white pt-10 pb-20 px-[213px] gap-5'}>
+                <div className={'w-1/3 h-fit border border-gray-400/30 p-5 '}>
                     <h4 className={'text-xl mb-2'}>About Me</h4>
                     <div className={'text-xs text-gray-600 max-w-xs flex flex-col gap-2'}>
                         <p>One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup.</p>
                         <p>He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed, and make a lot more money in the process. No more begging for vacation days and living from paycheck to paycheck. After trying everything from e-commerce stores to professional poker his lucky break came when he started freelance design. Vako fell in love with the field that gives him the lifestyle of his dreams.</p>
                         <p>Vako realizes that people who take courses on Udemy want to transform their lives. Today with his courses and mentoring Vako is helping thousands of people transform their lives, just like he did once.</p>
+                    </div>
+                </div>
+                <div className={'w-2/3 h-screen bg-orange-500 px-20 py-10'}>
+                    <div className={'flex gap-5 text-gray-700'}>
+                        <p>Courses</p>
+                        <p>Review</p>
                     </div>
                 </div>
             </div>
