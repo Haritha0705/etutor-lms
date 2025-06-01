@@ -23,6 +23,14 @@ import c10Img from "../../assets/image/Course Images10.jpg";
 
 import CommentCard from "../../Components/Instructor Profile/CommentCard.tsx";
 
+import Img1 from "../../assets/image/commentImg1.png"
+import Img2 from "../../assets/image/commentImg2.png"
+import Img3 from "../../assets/image/commentImg3.png"
+import Img4 from "../../assets/image/commentImg4.png"
+import Img5 from "../../assets/image/commentImg5.png"
+
+
+
 const coursesCards = [
     [c1Img, 'Design', 'Machine Learning A-Z™: Hands-On Python & R In Data...', 'bg-red-200/30', 'text-red-700', '$57', '5.0', '265.7K'],
     [c2Img, 'Developments', 'The Complete 2021 Web Development Bootcamp', 'bg-purple-300/30', 'text-purple-700', '$57', '5.0', '265.7K'],
@@ -128,7 +136,7 @@ const Instructor_Profile: React.FC = () => {
                     </div>
 
                     <div className="flex justify-between items-center">
-                        <p className="py-10 text-2xl font-medium">Students Feedback</p>
+                        <p className="pt-10 text-2xl font-medium">Students Feedback</p>
                         <select name="Star" className="w-fit h-fit px-2 py-2 border border-gray-300">
                             <option value="5_Star">5 Star Rating</option>
                             <option value="4_Star">4 Star Rating</option>
@@ -137,8 +145,13 @@ const Instructor_Profile: React.FC = () => {
                             <option value="1_Star">1 Star Rating</option>
                         </select>
                     </div>
-
-                    <CommentCard />
+                    <div>
+                        <CommentCard img={Img1} name={'Guy Hawkins'} des={'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.'} time={'1 week ago'}/>
+                        <CommentCard img={Img2} name={'Dianne Russell'} des={'This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step.'} time={'1 week ago'}/>
+                        <CommentCard img={Img3} name={'Bessie Cooper'} des={'Webflow course was good, it coves design secrtes, and to build responsive web pages, blog, and some more tricks and tips about webflow. I enjoyed the course and it helped me to add web development skills related to webflow in my toolbox. Thank you Vako.'} time={'1 week ago'}/>
+                        <CommentCard img={Img4} name={'Eleanor Pena'} des={'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.'} time={'1 week ago'}/>
+                        <CommentCard img={Img5} name={'Ralph Edwards'} des={'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.'} time={'1 week ago'}/>
+                    </div>
                 </div>
             </div>
         </section>
