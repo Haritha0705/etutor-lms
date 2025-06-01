@@ -28,6 +28,8 @@ import Img2 from "../../assets/image/commentImg2.png"
 import Img3 from "../../assets/image/commentImg3.png"
 import Img4 from "../../assets/image/commentImg4.png"
 import Img5 from "../../assets/image/commentImg5.png"
+import Button from "../../Components/Shared/Button.tsx";
+import Spinner from "../../assets/icons/Spinner.svg"
 
 
 
@@ -100,7 +102,7 @@ const Instructor_Profile: React.FC = () => {
                 </div>
             </div>
 
-            <div className="w-full flex bg-white pt-10 pb-20 px-[213px] gap-5">
+            <div className="w-full flex bg-white pt-10 px-[213px] gap-5">
                 <div className="w-1/3 h-fit border border-gray-400/30 p-5">
                     <h4 className="text-xl mb-2">About Me</h4>
                     <div className="text-xs text-gray-600 max-w-xs flex flex-col gap-2">
@@ -145,13 +147,14 @@ const Instructor_Profile: React.FC = () => {
                             <option value="1_Star">1 Star Rating</option>
                         </select>
                     </div>
-                    <div>
+                    <div className={'py-10'}>
                         <CommentCard img={Img1} name={'Guy Hawkins'} des={'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.'} time={'1 week ago'}/>
                         <CommentCard img={Img2} name={'Dianne Russell'} des={'This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step.'} time={'1 week ago'}/>
                         <CommentCard img={Img3} name={'Bessie Cooper'} des={'Webflow course was good, it coves design secrtes, and to build responsive web pages, blog, and some more tricks and tips about webflow. I enjoyed the course and it helped me to add web development skills related to webflow in my toolbox. Thank you Vako.'} time={'1 week ago'}/>
-                        <CommentCard img={Img4} name={'Eleanor Pena'} des={'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.'} time={'1 week ago'}/>
-                        <CommentCard img={Img5} name={'Ralph Edwards'} des={'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.'} time={'1 week ago'}/>
+                        <CommentCard img={Img4} name={'Eleanor Pena'} des={'GREAT Course! Instructor was very descriptive and professional. I learned a TON that is going to apply immediately to real life work. Thanks so much, cant wait for the next one!'} time={'1 week ago'}/>
+                        <CommentCard img={Img5} name={'Ralph Edwards'} des={'This should be one of the best course I ever made about UXUI in Udemy. Highly recommend to those who is new to UXUI and want to become UXUI freelancer!'} time={'1 week ago'}/>
                     </div>
+                    <Button text={'Load more'} colours={'secondary-primary'} icon={Spinner} className={'justify-center'}/>
                 </div>
             </div>
         </section>
