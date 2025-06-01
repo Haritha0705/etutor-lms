@@ -1,5 +1,5 @@
 import React from "react";
-import {ChevronRight,Star,Dot,AlarmClock} from 'lucide-react';
+import {ChevronRight,Star,Dot,AlarmClock,Clock3,ChartNoAxesColumnIncreasing,Users,BookText,LucideNotepadText} from 'lucide-react';
 import img1 from "../../assets/image/Image Instracter 4.jpg"
 import img2 from "../../assets/image/Image Instracter 5.jpg"
 
@@ -47,24 +47,72 @@ const SingleCoursePage:React.FC = ()=> {
                         <p>4.8<span> (451,444 Rating)</span></p>
                     </div>
                 </div>
-                <div className={'absolute w-[500px] right-72 top-20 p-10 bg-white'}>
-                    <div className={'flex '}>
-                        <div>
-                            <div className={'flex'}>
-                                <p>$14.00</p>
-                                <p>$26.00</p>
+                <div className={'absolute right-72 top-20 p-5 bg-white w-[500px]'}>
+                    <div className={'relative'}>
+                        <div className={'absolute w-full h-[0.01rem] bg-gray-200 bottom-0 left-0 right-0'}></div>
+                        <div className={'flex'}>
+                            <div className={'flex flex-col gap-5'}>
+                                <div className={'flex items-center gap-2'}>
+                                    <p className={'text-xl'}>$14.00</p>
+                                    <p className={'text-gray-400 line-through'}>$26.00</p>
+                                </div>
+                                <div className={'flex'}>
+                                    <AlarmClock  className={'text-red-600'}/>
+                                    <p className={'text-red-600'}>2 days left at this price!</p>
+                                </div>
                             </div>
-                            <div className={'flex'}>
-                                <AlarmClock  className={'text-red-600'}/>
-                                <p className={'text-red-600'}>2 days left at this price!</p>
+                            <div>
+                                <div className={'bg-orange-100 px-2 py-1'}>
+                                    <p className={'text-orange-500'}>56% off</p>
+                                </div>
                             </div>
+
                         </div>
-                        <div>
-                            <div className={'bg-orange-200'}>
-                                <p>56% off</p>
+
+                        <div className={'flex flex-col'}>
+                            <div className={'flex justify-between items-center'}>
+                                <div className={'flex gap-5'}>
+                                    <Clock3/>
+                                    <p>Course Duration</p>
+                                </div>
+                                <p className={'text-gray-400'}>6 Month</p>
                             </div>
+                            <div className={'flex justify-between items-center'}>
+                                <div className={'flex gap-5'}>
+                                    <ChartNoAxesColumnIncreasing/>
+                                    <p>Course Level</p>
+                                </div>
+                                <p className={'text-gray-400'}>Beginner and Intermediate</p>
+                            </div>
+                            <div className={'flex justify-between items-center'}>
+                                <div className={'flex gap-5'}>
+                                    <Users/>
+                                    <p>Students Enrolled</p>
+                                </div>
+                                <p className={'text-gray-400'}>69,419,618</p>
+                            </div>
+                            <div className={'flex justify-between items-center'}>
+                                <div className={'flex gap-5'}>
+                                    <BookText/>
+                                    <p>Language</p>
+                                </div>
+                                <p className={'text-gray-400'}>Mandarin</p>
+                            </div>
+                            <div className={'flex justify-between items-center'}>
+                                <div className={'flex gap-5'}>
+                                    <LucideNotepadText/>
+                                    <p>Subtittle Language</p>
+                                </div>
+                                <p className={'text-gray-400'}>English</p>
+                            </div>
+
+
+
+
+
                         </div>
                     </div>
+
 
 
                 </div>
