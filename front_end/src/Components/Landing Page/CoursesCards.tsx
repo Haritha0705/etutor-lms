@@ -1,7 +1,8 @@
 import React from "react";
 import star from '../../assets/icons/Star.svg';
 
-interface CoursesCardsProps {
+
+type CoursesCardProps = {
     img: string;
     category: string;
     text: string;
@@ -10,9 +11,10 @@ interface CoursesCardsProps {
     price: string;
     rating: string;
     studentCount: string;
-}
+};
 
-const CoursesCards: React.FC<CoursesCardsProps> = ({img, category, text, categoryColour, categoryTextColour, price, rating, studentCount}) => {
+
+const CoursesCards: React.FC<CoursesCardProps> = ({img, category, text, categoryColour, categoryTextColour, price, rating, studentCount}) => {
     return (
         <div className="w-[444px] shadow-xl overflow-hidden bg-white relative lg:w-[244px] md:w-[300px]">
             <img src={img} alt={`${text} course image`} className="w-full h-auto" />

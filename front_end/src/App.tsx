@@ -10,6 +10,7 @@ import Career from "./Pages/Career Page/CareerPage.tsx";
 import NotFoundPage from './Pages/Not Found Page/NotFoundPage.tsx'
 import Become_an_InstructorPage from "./Pages/Become an Instructor Page/Become_an_InstructorPage.tsx"
 import Instructor_Profile from "./Pages/Instructor Profile/Instructor_Profile.tsx";
+import New from "./Pages/new.tsx";
 
 const App:React.FC = () => {
     return (
@@ -25,6 +26,7 @@ const App:React.FC = () => {
                     <Route path="/career" element={<Career />} />
                     <Route path="/instructor_profile" element={<Instructor_Profile />} />
                     <Route path="*" element={<NotFoundPage/>} />
+                    <Route path="/new" element={<New/>} />
                 </Routes>
             </main>
             <Footer />
