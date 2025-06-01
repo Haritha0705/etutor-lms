@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
     return (
         <>
-            <footer className="bg-gray-900 w-full relative flex px-16 py-12 items-start justify-between flex-wrap gap-10">
+            <footer className="bg-gray-900 w-full relative flex px-16 py-12 items-start justify-between flex-wrap gap-10 bottom-0 right-0 left-0">
                 <div className="w-full bg-gray-100/30 absolute h-[0.01rem] top-0 left-0 right-0"></div>
                 <div className="w-full bg-gray-100/30 absolute h-[0.01rem] bottom-0 left-0 right-0"></div>
 

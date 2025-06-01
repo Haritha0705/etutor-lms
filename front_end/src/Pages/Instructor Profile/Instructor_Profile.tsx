@@ -113,10 +113,20 @@ const Instructor_Profile:React.FC = ()=> {
                             <CoursesCards key={i} img={img} category={category} text={text} categoryColour={categoryColour} categoryTextColour={categoryTextColour} price={price} rating={rating} studentCount={studentCount}/>
                         ))}
                     </div>
-                    <div>
+                    <div className={'flex justify-between items-center'}>
                         <p className={'py-10 text-2xl font-medium'}>Students Feedback</p>
+                        <select name="Star" className={'w-fit h-fit  px-2 py-2 border border-gray-300'}>
+                            <option value="5_Star">5 Star Rating</option>
+                            <option value="4_Star">4 Star Rating</option>
+                            <option value="3_Star">3 Star Rating</option>
+                            <option value="2_Star">2 Star Rating</option>
+                            <option value="1_Star">1 Star Rating</option>
+                        </select>
+                    </div>
+                    <div>
 
                     </div>
+
 
                 </div>
             </div>
