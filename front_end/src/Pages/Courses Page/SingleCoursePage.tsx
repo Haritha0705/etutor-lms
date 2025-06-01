@@ -2,6 +2,7 @@ import React from "react";
 import {ChevronRight,Star,Dot,AlarmClock,Clock3,ChartNoAxesColumnIncreasing,Users,BookText,LucideNotepadText} from 'lucide-react';
 import img1 from "../../assets/image/Image Instracter 4.jpg"
 import img2 from "../../assets/image/Image Instracter 5.jpg"
+import Button from "../../Components/Shared/Button.tsx";
 
 const SingleCoursePage:React.FC = ()=> {
 
@@ -105,16 +106,17 @@ const SingleCoursePage:React.FC = ()=> {
                                 </div>
                                 <p className={'text-gray-400'}>English</p>
                             </div>
-
-
-
-
+                            <div className={'flex flex-col gap-y-5'}>
+                                <Button className={'w-full justify-center'} text={'Add to Cart'} colours={'primary-primary'}/>
+                                <Button className={'w-full py-4 justify-center'} text={'Buy now'} colours={'secondary-primary'}/>
+                                <div className={'flex flex-row gap-5'}>
+                                    <Button text={'Add to wishlist'} className={'w-full justify-center'}/>
+                                    <Button text={'Gift Course'} className={'w-full justify-center'}/>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
             <div className={'bg-white h-screen'}>
