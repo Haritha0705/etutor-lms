@@ -33,9 +33,6 @@ const App:React.FC = () => {
             </main>
             <Footer />
         </BrowserRouter>
-
-
-
     )
 }
 
