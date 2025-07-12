@@ -30,3 +30,5 @@ coverage/
 # Optional: database
 *.sqlite
 
+
+/src/generated/prisma
