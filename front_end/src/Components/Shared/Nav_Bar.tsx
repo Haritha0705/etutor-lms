@@ -39,7 +39,7 @@ const Nav_Bar:React.FC = ()=> {
                 <div className="flex flex-row gap-6">
                     <div className="flex gap-2 items-center">
                         <img src={logo} alt="Logo" className="w-10" />
-                        <span className="text-3xl font-medium">E-tuter</span>
+                        <span className="text-3xl font-medium">E-tutor</span>
                     </div>
 
                     <div className="relative justify-center items-center flex">
