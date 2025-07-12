@@ -1,7 +1,6 @@
 import "dotenv/config"
 import { PrismaClient } from "../generated/prisma";
 
-
 const DB = new PrismaClient()
 
 const connectDB = async () =>{
