@@ -63,10 +63,10 @@ export class AuthService {
     //API - User Register
     register = async (req: Request) => {
         try {
-            const { password, username, name, email, profilePic, expertise, bio, role } = req.body;
+            const { password, username, email, role } = req.body;
 
             // Check required fields
-            if (!password || !name || !email || !username || !role) {
+            if (!password || !email || !username || !role) {
                 return  { success: false,status:400, message: "Missing some required fields" }
             }
 
@@ -98,11 +98,9 @@ export class AuthService {
             if (role === "student") {
                 const newStudent = await prisma.student.create({
                     data: {
-                        name,
                         email,
                         username,
-                        password: hashedPassword,
-                        profilePic,
+                        password: hashedPassword
                     },
                 });
                 const token = jwt.sign({ id: newStudent.id }, process.env.JWT_SECRET as string, { expiresIn: "1d" });
@@ -111,13 +109,9 @@ export class AuthService {
             } else if (role === "instructor") {
                 const newInstructor = await prisma.instructor.create({
                     data: {
-                        name,
                         email,
                         username,
-                        password: hashedPassword,
-                        profilePic,
-                        expertise,
-                        bio,
+                        password: hashedPassword
                     },
                 });
                 const token = jwt.sign({ id: newInstructor.id }, process.env.JWT_SECRET as string, { expiresIn: "1d" });

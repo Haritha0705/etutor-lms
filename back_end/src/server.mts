@@ -4,6 +4,7 @@ import {connectDB} from "./config/db.mjs";
 import adminRoutes from "./routes/adminRoutes.mjs";
 import authRoutes from "./routes/authRoutes.mjs";
 import instructorRoutes from "./routes/instructorRoutes.mjs";
+import studentRoutes from "./routes/studentRoutes.mjs";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,6 +15,7 @@ app.use(express.urlencoded({limit:'50mb',extended:true}))
 app.use("/api/v1/admin",adminRoutes)
 app.use("/api/v1/auth",authRoutes)
 app.use("/api/v1/instructor",instructorRoutes)
+app.use("/api/v1/student",studentRoutes)
 
 const startServer = async ()=>{
     try {
@@ -26,8 +28,5 @@ const startServer = async ()=>{
         process.exit(1);
     }
 }
-
-
-
 
 startServer()

@@ -12,11 +12,7 @@ interface CustomRequest extends Request{
 interface RegisterBody {
     password: string;
     username: string;
-    name: string;
     email: string;
-    profilePic?: string;
-    bio?: string;
-    expertise?: string;
     role: "student" | "instructor";
 }
 
