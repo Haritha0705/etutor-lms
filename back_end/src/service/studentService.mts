@@ -67,6 +67,42 @@ export class StudentService {
             return {success: false, status: 500, message: "Internal server error", error: e.message};
         }
     }
+
+    //API - Update Student Profile
+    deleteProfile = async (req:Request)=> {
+        try {
+            const {id} =req.params;
+            const studentId = parseInt(id);
+
+            //check in id enter
+            if (!id){
+                return {success: false, status: 400, message: "Missing Student ID"};
+            }
+
+            // Check if profile exists before updating
+            const existingProfile = await DB.studentProfile.findUnique({where: { studentId: studentId }});
+
+            if (!existingProfile) {
+                return { success: false, status: 404, message: "Student profile not found" };
+            }
+
+            // Delete student profile
+            await DB.studentProfile.deleteMany({
+                where: { studentId: studentId }
+            });
+
+            // Delete student
+            await DB.student.delete({
+                where: { id: studentId }
+            });
+
+            return { success: true, status: 200, message: "Student profile deleted successfully" };
+
+        }  catch (e: any) {
+            console.log(e);
+            return {success: false, status: 500, message: "Internal server error", error: e.message};
+        }
+    }
 }
 
 export default new StudentService()
