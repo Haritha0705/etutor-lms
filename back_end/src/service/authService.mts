@@ -103,6 +103,17 @@ export class AuthService {
                         password: hashedPassword
                     },
                 });
+
+                const newStudentProfile = await prisma.studentProfile.create({
+                    data:{
+                        studentId: newStudent.id,
+                        full_name: "",
+                        bio: "",
+                        phone: "",
+                        address: "",
+                        profilePic: "",
+                    }
+                })
                 const token = jwt.sign({ id: newStudent.id }, process.env.JWT_SECRET as string, { expiresIn: "1d" });
                 return { success: true,status:201, user: newStudent, token }
 
@@ -114,6 +125,16 @@ export class AuthService {
                         password: hashedPassword
                     },
                 });
+
+                const newInstructorProfile = await prisma.instructorProfile.create({
+                    data:{
+                        instructorId: newInstructor.id,
+                        full_name: "",
+                        bio: "",
+                        expertise: "",
+                        profilePic: "",
+                    }
+                })
                 const token = jwt.sign({ id: newInstructor.id }, process.env.JWT_SECRET as string, { expiresIn: "1d" });
                 return { success: true,status:201, user: newInstructor, token }
             } else {

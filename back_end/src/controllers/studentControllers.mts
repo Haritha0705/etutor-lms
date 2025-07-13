@@ -1,6 +1,14 @@
 import {Request,Response} from "express";
 import studentService,{StudentService} from "../service/studentService.mjs";
 
+interface StudentProfileUpdateData {
+    profilePic?: string;
+    full_name?: string;
+    bio?: string;
+    phone?: string;
+    address?: string;
+}
+
 class StudentControllers {
     private readonly studentService:StudentService;
 
@@ -23,7 +31,27 @@ class StudentControllers {
                 data:result.studentProfile
             });
 
-        }catch (e: any) {
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+
+    updateProfile = async (req: Request<{}, {}, StudentProfileUpdateData>, res: Response):Promise<void> =>{
+        try {
+            const result = await this.studentService.updateProfile(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message,
+                data:result.updateProfile
+            });
+        } catch (e: any) {
             console.log(e);
             res.status(500).json({ success: false, message: "Server error", error: e.message });
         }

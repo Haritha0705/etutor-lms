@@ -3,6 +3,8 @@ import studentControllers from "../controllers/studentControllers.mjs";
 
 const studentRoutes = Router()
 
-studentRoutes.get("/profile/:id",studentControllers.getProfile)
+studentRoutes.get("/get-profile/:id",studentControllers.getProfile)
+studentRoutes.patch("/update-profile/:id",studentControllers.updateProfile)
+
 
 export default studentRoutes
