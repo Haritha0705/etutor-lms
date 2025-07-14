@@ -1,6 +1,13 @@
 import {Request,Response} from "express";
 import instructorService, {InstructorService} from "../service/instructorService.mjs";
 
+interface InstructorProfileUpdateData {
+    profilePic?: string;
+    full_name?: string;
+    bio?: string;
+    expertise?: string;
+}
+
 class InstructorControllers {
     private readonly instructorService:InstructorService
     constructor(instructorService:InstructorService ) {
@@ -22,6 +29,26 @@ class InstructorControllers {
                 data:result.instructorProfile
             });
 
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+
+    updateProfile = async (req: Request<{}, {}, InstructorProfileUpdateData>, res: Response):Promise<void> =>{
+        try {
+            const result = await this.instructorService.updateProfile(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message,
+                data:result.updateProfile
+            });
         } catch (e: any) {
             console.log(e);
             res.status(500).json({ success: false, message: "Server error", error: e.message });
