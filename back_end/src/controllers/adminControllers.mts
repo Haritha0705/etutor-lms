@@ -1,28 +1,41 @@
 import {Request,Response} from "express";
-import jwt from "jsonwebtoken"
+import adminService,{AdminService} from "../service/adminService.mjs";
 
-//Admin login
-const adminLogin = async (req:Request,res:Response):Promise<any> => {
-    try {
-        const {email,password} = req.body
-
-        //check missing reqed filed
-        if (!email || !password){
-            return res.status(400).json({success:false,message:"Missing Email or Password"})
-        }
-
-        //chack email and password correct or not
-        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD){
-            const token = jwt.sign(email+password,process.env.JWT_SECRET as string)
-            return res.status(200).json({success:true,token})
-        }else {
-            return res.status(400).json({ success: false, message: "Invalid Credentials!" });
-        }
-
-    }catch (e:any) {
-        console.log(e)
-        res.status(500).json({success: false, message: "Something went wrong", error: e.message,});
+interface CustomRequest extends Request{
+    body:{
+        password:string;
+        username:string;
     }
 }
 
-export {adminLogin}
+class AuthControllers {
+
+    private readonly adminService:AdminService
+
+    constructor(adminService:AdminService) {
+        this.adminService=adminService
+    }
+
+    login = async (req: CustomRequest, res: Response): Promise<void> => {
+        try {
+            const result = await this.adminService.login(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message,
+                token: result.token,
+            });
+
+        }catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+}
+
+export default new AuthControllers(adminService)

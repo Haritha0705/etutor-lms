@@ -1,8 +1,8 @@
 import {Router} from "express";
-import {adminLogin} from "../controllers/adminControllers.mjs";
+import adminControllers from "../controllers/adminControllers.mjs";
 
 const adminRoutes = Router();
 
-adminRoutes.post("/login",adminLogin)
+adminRoutes.post("/login",adminControllers.login)
 
 export default adminRoutes;
