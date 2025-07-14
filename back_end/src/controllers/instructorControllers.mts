@@ -6,14 +6,26 @@ class InstructorControllers {
     constructor(instructorService:InstructorService ) {
         this.instructorService=instructorService
     }
-    getCourse = (req:Request,res:Response):void =>{
-        const users:string | null =this.instructorService.getUser()
-        if (users === null){
-            res.status(404).json({message:"No user Found !"})
-            return
+
+    getProfile = async (req: Request, res: Response): Promise<void> =>{
+        try {
+            const result = await this.instructorService.getProfile(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message,
+                data:result.instructorProfile
+            });
+
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
         }
-        res.status(200).json({message:"Get user",data:users})
-        return;
     }
     
 }

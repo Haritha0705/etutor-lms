@@ -18,7 +18,7 @@ export class StudentService {
             const studentProfile = await DB.studentProfile.findUnique({where:{studentId:studentId}})
 
             if (!studentProfile) {
-                return {success: false, status: 200,message: "User not found"};
+                return {success: false, status: 404,message: "Student profile not found"};
             }
 
             return {success: true, status: 200,studentProfile};
