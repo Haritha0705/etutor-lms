@@ -54,8 +54,25 @@ class InstructorControllers {
             res.status(500).json({ success: false, message: "Server error", error: e.message });
         }
     }
-    
-}
 
+    deleteProfile = async (req: Request, res: Response): Promise<void> =>{
+        try {
+            const result = await this.instructorService.deleteProfile(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message
+            });
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+}
 
 export default new InstructorControllers(instructorService)
