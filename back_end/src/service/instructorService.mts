@@ -1,6 +1,7 @@
 import {Request} from "express";
 import {DB} from "../config/db.mjs";
 
+
 export class InstructorService {
 
     //API - Get Instructor Profile
@@ -102,6 +103,9 @@ export class InstructorService {
             return {success: false, status: 500, message: "Internal server error", error: e.message};
         }
     }
+
+    //API - Crete Courses
+    // createCourses
 
 }
 
