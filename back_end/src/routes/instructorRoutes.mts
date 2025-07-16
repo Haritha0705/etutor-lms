@@ -9,6 +9,8 @@ instructorRoutes.patch("/update-profile/:id",instructorControllers.updateProfile
 instructorRoutes.delete("/delete-profile/:id",instructorControllers.deleteProfile)
 
 //Create Course
+instructorRoutes.post("/create-course/:id",instructorControllers.CreteCourses)
+
 
 
 export default instructorRoutes

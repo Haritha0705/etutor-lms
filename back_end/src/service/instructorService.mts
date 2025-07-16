@@ -1,5 +1,8 @@
 import {Request} from "express";
 import {DB} from "../config/db.mjs";
+import { PrismaClient } from "../generated/prisma";
+
+const prisma = new PrismaClient();
 
 
 export class InstructorService {
@@ -105,7 +108,41 @@ export class InstructorService {
     }
 
     //API - Crete Courses
-    // createCourses
+    createCourses = async (req:Request)=> {
+        try {
+            const { id } = req.params;
+            const { title, description } = req.body;
+
+            //check in id enter
+            if (!id){
+                return {success: false, status: 400, message: "Missing Instructor ID"};
+            }
+
+            //check in title and description
+            if (!title || !description){
+                return {success: false, status: 400, message: "Missing filed"};
+            }
+
+            const instructorId = parseInt(id);
+            if (isNaN(instructorId)) {
+                return { success: false, status: 400, message: "Instructor ID must be a valid number" };
+            }
+
+            const newCourse = await prisma.course.create({
+                data: {
+                    title,
+                    description,
+                    instructorId
+                }
+            });
+
+            return {success: true, status: 201, message: "New course created successfully", data: newCourse};
+
+        }  catch (e: any) {
+            console.log(e);
+            return {success: false, status: 500, message: "Internal server error", error: e.message};
+        }
+    }
 
 }
 

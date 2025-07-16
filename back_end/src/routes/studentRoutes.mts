@@ -1,5 +1,6 @@
 import {Router} from "express";
 import studentControllers from "../controllers/studentControllers.mjs";
+// import {authorizeRole} from "../middlewares/auth.mjs";
 
 const studentRoutes = Router()
 

@@ -8,6 +8,11 @@ interface InstructorProfileUpdateData {
     expertise?: string;
 }
 
+interface CreteCourses {
+    title: string;
+    description: string;
+}
+
 class InstructorControllers {
     private readonly instructorService:InstructorService
     constructor(instructorService:InstructorService ) {
@@ -73,6 +78,26 @@ class InstructorControllers {
             res.status(500).json({ success: false, message: "Server error", error: e.message });
         }
     }
+    CreteCourses = async (req: Request<{}, {}, CreteCourses>, res: Response): Promise<void> =>{
+        try {
+            const result = await this.instructorService.createCourses(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message,
+                data:result.data
+            });
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+
 }
 
 export default new InstructorControllers(instructorService)
