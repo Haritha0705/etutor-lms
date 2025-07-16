@@ -78,7 +78,7 @@ class InstructorControllers {
             res.status(500).json({ success: false, message: "Server error", error: e.message });
         }
     }
-    CreteCourses = async (req: Request<{}, {}, CreteCourses>, res: Response): Promise<void> =>{
+    creteCourses = async (req: Request<{}, {}, CreteCourses>, res: Response): Promise<void> =>{
         try {
             const result = await this.instructorService.createCourses(req);
 
@@ -92,6 +92,26 @@ class InstructorControllers {
                 message: result.message,
                 data:result.data
             });
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+
+    getCourses = async (req: Request, res: Response): Promise<void> =>{
+        try {
+            const result = await this.instructorService.getCourses(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                message: result.message
+            });
+
         } catch (e: any) {
             console.log(e);
             res.status(500).json({ success: false, message: "Server error", error: e.message });

@@ -144,6 +144,67 @@ export class InstructorService {
         }
     }
 
+    //API - Get Courses
+    getCourses = async (req:Request)=> {
+        try {
+            const {id} =req.params;
+            const CoursesId = parseInt(id);
+
+            //check in id enter
+            if (!id){
+                return {success: false, status: 400, message: "Missing Instructor ID"};
+            }
+
+            //find instructor profile
+            const coursesProfile = await DB.course.findUnique({where:{id:CoursesId}})
+
+            if (!coursesProfile) {
+                return {success: false, status: 404,message: "Instructor profile not found"};
+            }
+
+            return {success: true, status: 200,coursesProfile};
+
+        } catch (e: any) {
+            console.log(e);
+            return {success: false, status: 500, message: "Internal server error", error: e.message};
+        }
+    }
+
+    //API - Update Courses
+    // updateCourses = async (req:Request)=> {
+    //     try {
+    //         const {id} =req.params;
+    //         const CoursesId = parseInt(id);
+    //         const { title, description } = req.body
+    //
+    //         //check in id enter
+    //         if (!id){
+    //             return {success: false, status: 400, message: "Missing Course ID"};
+    //         }
+    //
+    //         // Check if profile exists before updating
+    //         const existingCourses = await DB.course.findUnique({where: { id:id }});
+    //
+    //         if (!existingCourses) {
+    //             return { success: false, status: 404, message: "Instructor profile not found" };
+    //         }
+    //
+    //         const updateProfile = await DB.course.update({
+    //             where: { instructorId: CoursesId },
+    //             data:{
+    //                 title,
+    //                 description,
+    //             }
+    //         })
+    //
+    //         return {success: true, status: 200,updateProfile};
+    //
+    //     }  catch (e: any) {
+    //         console.log(e);
+    //         return {success: false, status: 500, message: "Internal server error", error: e.message};
+    //     }
+    // }
+
 }
 
 export default new InstructorService()
