@@ -114,7 +114,7 @@ export class InstructorService {
 
             //check in id enter
             if (!id){
-                return {success: false, status: 400, message: "Missing Instructor ID"};
+                return {success: false, status: 400, message: "Missing instructorId ID"};
             }
 
             //check in title and description
@@ -124,7 +124,7 @@ export class InstructorService {
 
             const instructorId = parseInt(id);
             if (isNaN(instructorId)) {
-                return { success: false, status: 400, message: "Instructor ID must be a valid number" };
+                return { success: false, status: 400, message: "Course ID must be a valid number" };
             }
 
             const newCourse = await prisma.course.create({
@@ -158,7 +158,7 @@ export class InstructorService {
             const coursesProfile = await DB.course.findUnique({where:{id:CoursesId}})
 
             if (!coursesProfile) {
-                return {success: false, status: 404,message: "Instructor profile not found"};
+                return {success: false, status: 404,message: "Course not found"};
             }
 
             return {success: true, status: 200,coursesProfile};
@@ -185,7 +185,7 @@ export class InstructorService {
             const existingProfile = await DB.course.findUnique({where: { id: CoursesId }});
 
             if (!existingProfile) {
-                return { success: false, status: 404, message: "Instructor profile not found" };
+                return { success: false, status: 404, message: "Course not found" };
             }
 
             const updateProfile = await DB.course.update({
@@ -219,7 +219,7 @@ export class InstructorService {
             const existingProfile = await DB.course.findUnique({where: { id: CoursesId }});
 
             if (!existingProfile) {
-                return { success: false, status: 404, message: "Instructor profile not found" };
+                return { success: false, status: 404, message: "Course not found" };
             }
 
             // Delete Course
@@ -227,12 +227,7 @@ export class InstructorService {
                 where: { id: CoursesId }
             });
 
-            // Delete Instructor
-            await DB.instructor.delete({
-                where: { id: CoursesId }
-            });
-
-            return { success: true, status: 200, message: "Instructor profile deleted successfully" };
+            return { success: true, status: 200, message: "Course deleted successfully" };
 
         }  catch (e: any) {
             console.log(e);
