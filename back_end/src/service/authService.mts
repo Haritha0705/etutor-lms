@@ -30,7 +30,6 @@ export class AuthService {
                     return { success: false, status: 401, message: "Invalid password" };
                 }
 
-
                 // const token = jwt.sign(
                 //     { id: student.id, role: "student" },
                 //     process.env.JWT_SECRET as string,
@@ -49,7 +48,6 @@ export class AuthService {
                     return { success: false, status: 404, message: "Instructor not found" };
                 }
 
-
                 const isMatch = await bcrypt.compare(password, instructor.password);
                 if (!isMatch) {
                     return { success: false, status: 401, message: "Invalid password" };
@@ -60,8 +58,6 @@ export class AuthService {
                 //     process.env.JWT_SECRET as string,
                 //     { expiresIn: "1d" }
                 // );
-
-
 
                 const token = jwt.sign({ id: instructor.id }, process.env.JWT_SECRET as string, { expiresIn: "1h" });
 

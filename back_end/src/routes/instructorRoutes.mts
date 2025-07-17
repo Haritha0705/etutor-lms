@@ -11,5 +11,6 @@ instructorRoutes.delete("/delete-profile/:id",instructorControllers.deleteProfil
 //Create Course
 instructorRoutes.post("/create-course/:id",instructorControllers.creteCourses)
 instructorRoutes.get("/get-course/:id",instructorControllers.getCourses)
+instructorRoutes.patch("/update-course/:id",instructorControllers.updateCourse)
 
 export default instructorRoutes
