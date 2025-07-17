@@ -181,7 +181,7 @@ export class InstructorService {
                 return {success: false, status: 400, message: "Missing Course ID"};
             }
 
-            // Check if profile exists before updating
+            // Check if Course exists before updating
             const existingProfile = await DB.course.findUnique({where: { id: CoursesId }});
 
             if (!existingProfile) {
@@ -199,6 +199,42 @@ export class InstructorService {
             return {success: true, status: 200,updateProfile};
 
         } catch (e: any) {
+            console.log(e);
+            return {success: false, status: 500, message: "Internal server error", error: e.message};
+        }
+    }
+
+    //API - Delete Course
+    deleteCourse = async (req:Request)=> {
+        try {
+            const {id} = req.params;
+            const CoursesId = parseInt(id);
+
+            //check in id enter
+            if (!id){
+                return {success: false, status: 400, message: "Missing Instructor ID"};
+            }
+
+            // Check if Course exists before updating
+            const existingProfile = await DB.course.findUnique({where: { id: CoursesId }});
+
+            if (!existingProfile) {
+                return { success: false, status: 404, message: "Instructor profile not found" };
+            }
+
+            // Delete Course
+            await DB.course.deleteMany({
+                where: { id: CoursesId }
+            });
+
+            // Delete Instructor
+            await DB.instructor.delete({
+                where: { id: CoursesId }
+            });
+
+            return { success: true, status: 200, message: "Instructor profile deleted successfully" };
+
+        }  catch (e: any) {
             console.log(e);
             return {success: false, status: 500, message: "Internal server error", error: e.message};
         }
