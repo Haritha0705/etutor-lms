@@ -1,5 +1,9 @@
 import {Request} from "express";
 import {DB} from "../config/db.mjs";
+// import { PrismaClient } from '@prisma/client'
+//
+//
+// const prisma = new PrismaClient()
 
 export class StudentService {
 
@@ -103,6 +107,32 @@ export class StudentService {
             return {success: false, status: 500, message: "Internal server error", error: e.message};
         }
     }
+
+    //API - Course Enrollment
+    // courseEnrollment = async (req:Request)=> {
+    //     try {
+    //         const { studentId, courseId } = req.params
+    //
+    //
+    //         //check in id enter
+    //         if (!studentId || !courseId) {
+    //             return {success: false, status: 400, message: "studentId and courseId are required"};
+    //         }
+    //
+    //         await DB.courseEnrollment.findUnique({
+    //             where: {
+    //                 studentId_courseId: {
+    //                     studentId,
+    //                     courseId,
+    //                 },
+    //             },
+    //         })
+    //     }  catch (e: any) {
+    //         console.log(e);
+    //         return {success: false, status: 500, message: "Internal server error", error: e.message};
+    //     }
+    // }
+    
 }
 
 export default new StudentService()

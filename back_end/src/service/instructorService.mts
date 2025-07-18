@@ -212,7 +212,7 @@ export class InstructorService {
 
             //check in id enter
             if (!id){
-                return {success: false, status: 400, message: "Missing Instructor ID"};
+                return {success: false, status: 400, message: "Missing Course ID"};
             }
 
             // Check if Course exists before updating
