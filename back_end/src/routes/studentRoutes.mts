@@ -11,5 +11,7 @@ studentRoutes.patch("/update-profile/:id",Auth.authStudent,studentControllers.up
 studentRoutes.delete("/delete-profile/:id",Auth.authStudent,studentControllers.deleteProfile)
 
 //Course Routes
+studentRoutes.get("/course/:studentId/enrollment/:courseId",Auth.authStudent,studentControllers.courseEnrollment)
+
 
 export default studentRoutes
