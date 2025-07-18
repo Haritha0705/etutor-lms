@@ -105,6 +105,17 @@ export class StudentService {
         }
     }
 
+    //API - All Course's
+    allCourses = async ()=> {
+        try {
+            const courses = await DB.course.findMany()
+            return {success:true,status: 200,data:courses}
+        }  catch (e: any) {
+            console.log(e);
+            return {success: false, status: 500, message: "Internal server error", error: e.message};
+        }
+    }
+
     //API - Course Enrollment
     courseEnrollment = async (req:Request)=> {
         try {
@@ -147,6 +158,40 @@ export class StudentService {
 
             return {success: true, status: 200, message: "Enrolled and logged in successfully", data: {student, enrollment, token}};
 
+        }  catch (e: any) {
+            console.log(e);
+            return {success: false, status: 500, message: "Internal server error", error: e.message};
+        }
+    }
+
+    //API - All Enrollment Course's
+    allEnrollmentCourses = async (req:Request)=> {
+        try {
+            const { studentId } = req.params
+
+            //check in id enter
+            if (!studentId ) {
+                return {success: false, status: 400, message: "studentId is required"};
+            }
+
+            // Get student info
+            const student = await DB.student.findUnique({where:{id:Number(studentId)}})
+
+            if (!student) {
+                return {success: false, status: 404, message: "Student not found"};
+            }
+
+            // Get all enrollments for the student, include course info
+            const enrollmentCourses = await DB.courseEnrollment.findMany({
+                where: { studentId: Number(studentId) },
+                include: { course: true },
+            });
+
+            if (!enrollmentCourses){
+                return {success:true,status: 200,message:"Student not enrollments any course"}
+            }
+
+            return {success:true,status: 200,data:enrollmentCourses}
         }  catch (e: any) {
             console.log(e);
             return {success: false, status: 500, message: "Internal server error", error: e.message};

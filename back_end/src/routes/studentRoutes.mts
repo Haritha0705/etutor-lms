@@ -12,6 +12,8 @@ studentRoutes.delete("/delete-profile/:id",Auth.authStudent,studentControllers.d
 
 //Course Routes
 studentRoutes.get("/course/:studentId/enrollment/:courseId",Auth.authStudent,studentControllers.courseEnrollment)
+studentRoutes.get("/all-courses",Auth.authStudent,studentControllers.allCourses)
+studentRoutes.get("/all-enrollment-courses/:studentId",Auth.authStudent,studentControllers.allEnrollmentCourses)
 
 
 export default studentRoutes

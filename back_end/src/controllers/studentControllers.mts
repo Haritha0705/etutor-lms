@@ -76,6 +76,25 @@ class StudentControllers {
         }
     }
 
+    allCourses = async (_: Request, res: Response): Promise<void> =>{
+        try {
+            const result = await this.studentService.allCourses();
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                data:result.data
+            });
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
+
     courseEnrollment = async (req: Request, res: Response): Promise<void> =>{
         try {
             const result = await this.studentService.courseEnrollment(req);
@@ -95,5 +114,25 @@ class StudentControllers {
             res.status(500).json({ success: false, message: "Server error", error: e.message });
         }
     }
+
+    allEnrollmentCourses = async (req: Request, res: Response): Promise<void> =>{
+        try {
+            const result = await this.studentService.allEnrollmentCourses(req);
+
+            if (!result.success) {
+                res.status(result.status ?? 500).json({ success: false, message: result.message });
+                return;
+            }
+
+            res.status(200).json({
+                success: true,
+                data:result.data
+            });
+        } catch (e: any) {
+            console.log(e);
+            res.status(500).json({ success: false, message: "Server error", error: e.message });
+        }
+    }
 }
+
 export default new StudentControllers(studentService)
